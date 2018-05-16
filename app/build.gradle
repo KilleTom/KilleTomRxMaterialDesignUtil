@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -35,4 +37,5 @@ dependencies {
     implementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
+
 }
