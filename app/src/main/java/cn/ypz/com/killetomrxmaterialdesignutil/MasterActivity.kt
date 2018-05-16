@@ -2,8 +2,8 @@ package cn.ypz.com.killetomrxmaterialdesignutil
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.RxToast
-import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.anim.RxToastType
+import cn.ypz.com.killetomrxmateria.rxwidget.toast.RxToast
+import cn.ypz.com.killetomrxmateria.rxwidget.toast.anim.RxToastType
 import kotlinx.android.synthetic.main.activity_master.*
 
 class MasterActivity : AppCompatActivity() {
