@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MasterActivity">
 
-    <TextView
+    <cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.raisebutton.RxRaisedDropButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:theme="@style/RxRaisedDropPrimaryStyle"
+        android:text="DIY has Ripper"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="100dp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+
+    <cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.raisebutton.RxRaisedDropButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/RxRaisedDropNoRippleStyle"
+        android:text="DIY hasn't Ripper"
+        android:layout_gravity="center_horizontal"/>
+
+    <cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.raisebutton.RxRaisedDropImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIY has Ripper"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/RxRaisedDropPrimaryStyle"
+        android:layout_margin="10dp"/>
+
+    <cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.raisebutton.RxRaisedDropImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_gravity="center_horizontal"
+        android:text="DIY hasn't Ripper"
+        android:theme="@style/RxRaisedDropNoRippleStyle"
+        android:layout_margin="10dp"/>
+</LinearLayout>
