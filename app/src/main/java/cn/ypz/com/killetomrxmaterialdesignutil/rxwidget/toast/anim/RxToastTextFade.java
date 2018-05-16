@@ -4,7 +4,8 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 
-import com.zia.toastex.RxToast;
+import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.RxToast;
+
 
 /**
  * 文字颜色渐变toast文本

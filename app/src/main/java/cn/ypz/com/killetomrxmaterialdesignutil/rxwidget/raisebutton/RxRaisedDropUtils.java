@@ -16,7 +16,6 @@
 
 package cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.raisebutton;
 
-
 import android.animation.AnimatorInflater;
 import android.animation.StateListAnimator;
 import android.os.Build;

@@ -25,9 +25,6 @@ import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.anim.RxToastTextFa
 import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.anim.RxToastType;
 import cn.ypz.com.killetomrxmaterialdesignutil.rxwidget.toast.anim.RxToastWarningAnimation;
 
-/**
- * Created by zia on 2018/5/13.
- */
 public class RxToast {
 
     @ColorInt
@@ -106,16 +103,6 @@ public class RxToast {
         toastTextView.setTextColor(DEFAULT_TEXT_COLOR);
         toastTextView.setTypeface(currentTypeface);
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
-        StringBuffer stringBuffer = new StringBuffer();
-
-        int red = (bgColor & 0xff0000) >> 16;
-        int green = (bgColor & 0x00ff00) >> 8;
-        int blue = (bgColor & 0x0000ff);
-
-        stringBuffer.append(Integer.toHexString(red));
-        stringBuffer.append(Integer.toHexString(green));
-        stringBuffer.append(Integer.toHexString(blue));
-        Log.i("ypz","changecolor=#" + stringBuffer.toString());
         return custom(context, toastTextView, duration, bgColor, toastImage);
     }
 
