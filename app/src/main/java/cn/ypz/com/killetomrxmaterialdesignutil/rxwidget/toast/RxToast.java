@@ -89,7 +89,6 @@ public class RxToast {
                     toastImage = new RxToastWarningAnimation(context);
                 return custom(context, message, duration, WARNING_COLOR, toastImage);
         }
-        Log.i("ypz", "isGo");
         return custom(context, message, duration, NO_COLOR, toastImage);
     }
 
