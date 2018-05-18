@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="RxRaisedDropPrimaryStyle" parent="Theme.AppCompat.Light">
-        <!--设置点亮的动画颜色-->
-        <item name="android:colorControlHighlight">#DA6954</item>
-        <!--设置正常背景颜色颜色-->
-        <item name="android:colorControlNormal">@color/colorAccent</item>
-        <item name="android:colorControlActivated">#DA8736</item>
-        <item name="android:colorButtonNormal">@color/colorAccent</item>
 
-    </style>
-
-    <style name="RxRaisedDropNoRippleStyle" parent="Theme.AppCompat.Light">">
-        <!--设置点亮的动画颜色为透明隐藏掉波纹动画-->
-        <item name="android:colorControlHighlight">@android:color/transparent</item>
-    </style>
 
 </resources>

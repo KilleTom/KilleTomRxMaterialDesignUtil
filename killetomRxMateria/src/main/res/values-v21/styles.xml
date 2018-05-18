@@ -16,4 +16,19 @@
         <item name="android:colorControlHighlight">@android:color/transparent</item>
     </style>
 
+    <style name="RxRaisedDroptranslucentStyle" parent="Theme.AppCompat.Light">
+        <!--设置点亮的动画颜色-->
+        <item name="android:colorControlHighlight">#DA6954</item>
+        <!--设置正常背景颜色颜色-->
+        <item name="android:colorControlNormal">@color/dimgray</item>
+
+    </style>
+
+    <style name="RxRaisedDropButtonPermissionSureStyle" parent="Theme.AppCompat.Light">
+        <!--设置点亮的动画颜色-->
+        <item name="android:colorControlHighlight">#66CC99</item>
+        <!--设置正常背景颜色颜色-->
+        <item name="android:colorControlNormal">#CCFF99</item>
+        <item name="android:colorButtonNormal">#CCFF99</item>
+    </style>
 </resources>

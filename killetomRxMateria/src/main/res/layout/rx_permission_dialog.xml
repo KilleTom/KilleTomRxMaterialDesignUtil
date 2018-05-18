@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/p_d"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/rx_permission_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/rx_p_d_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Dear User"
+        android:textColor="#FFFFCC"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/rx_p_d_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="你需要授权权限才能使用该功能"
+        android:textColor="#FFFAFA"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rx_p_d_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+            android:id="@+id/rx_p_d_sure"
+            style="@style/RxRaisedDropButtonPermissionSureStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="14dp"
+            android:text="确认"
+            android:textColor="@color/dimgray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:theme="@style/RxRaisedDropButtonPermissionSureStyle" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+            android:id="@+id/rx_p_d_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:elevation="0dp"
+            android:padding="14dp"
+            android:text="取消"
+            android:textColor="@color/beige"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:theme="@style/RxRaisedDroptranslucentStyle" />
+    </LinearLayout>
+
+</LinearLayout>
