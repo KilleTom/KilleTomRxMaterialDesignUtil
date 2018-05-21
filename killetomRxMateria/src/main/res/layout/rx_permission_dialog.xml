@@ -16,7 +16,6 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Dear User"
-        android:textColor="#FFFFCC"
         android:textSize="25sp" />
 
     <TextView
@@ -28,7 +27,6 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="你需要授权权限才能使用该功能"
-        android:textColor="#FFFAFA"
         android:textSize="16sp" />
 
     <android.support.v7.widget.RecyclerView
@@ -38,41 +36,46 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="20dp" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
-        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxflatButton
             android:id="@+id/rx_p_d_sure"
-            style="@style/RxRaisedDropButtonPermissionSureStyle"
+            style="@style/RxPermissionButtonStysle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginEnd="20dp"
-            android:padding="14dp"
             android:text="确认"
-            android:textColor="@color/dimgray"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:theme="@style/RxRaisedDropButtonPermissionSureStyle" />
+            app:flatButtonRadius="3dp"
+            app:flatButtonTextAppearance="none"
+            app:flatButtonTouchEffect="ripple"
+            app:flatButtonMainColor="@color/_0099ff"
+            android:layout_alignParentStart="true"/>
 
-        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxflatButton
             android:id="@+id/rx_p_d_cancle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:elevation="0dp"
-            android:padding="14dp"
+            android:layout_height="match_parent"
             android:text="取消"
-            android:textColor="@color/beige"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:theme="@style/RxRaisedDroptranslucentStyle" />
-    </LinearLayout>
+            style="@style/RxPermissionButtonStysle"
+            app:flatButtonBlockButtonEffectHeight="0dp"
+            app:flatButtonRadius="3dp"
+            app:flatButtonTextAppearance="none"
+            app:flatButtonTouchEffect="ease"
+            app:flatButtonMainColor="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+             />
+    </RelativeLayout>
 
 </LinearLayout>

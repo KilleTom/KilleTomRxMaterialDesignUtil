@@ -27,18 +27,24 @@
         android:layout_gravity="center_horizontal"/>
 
     <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@mipmap/rx_permission_calendar_icon"
         android:theme="@style/RxRaisedDropPrimaryStyle"
         android:layout_margin="10dp"/>
 
     <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@mipmap/rx_permission_calendar_icon"
         android:layout_gravity="center_horizontal"
         android:theme="@style/RxRaisedDropNoRippleStyle"
         android:layout_margin="10dp"/>
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast
+        android:id="@+id/diytoast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

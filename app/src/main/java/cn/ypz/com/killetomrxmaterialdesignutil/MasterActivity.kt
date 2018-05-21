@@ -1,14 +1,10 @@
 package cn.ypz.com.killetomrxmaterialdesignutil
 
-import android.Manifest
 import android.os.Bundle
 import android.util.Log
 import cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog.RxPermissionBaseActivity
-import cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog.RxPermissionEmpty
-import cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog.RxPermissions
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.RxToast
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.anim.RxToastType
-import kotlinx.android.synthetic.main.activity_master.*
 
 class MasterActivity : RxPermissionBaseActivity() {
 
@@ -17,16 +13,20 @@ class MasterActivity : RxPermissionBaseActivity() {
         try {
             setContentView(R.layout.activity_master)
         } catch (e: Exception) {
-            Log.i("ypz",e.message)
+            Log.i("ypz", e.message)
         }
-         showtoast.setOnClickListener({
-             RxPermissions.with(this).initDialogPermission(
-                     RxPermissions.Builder.Requestpermissionself { permissionAllow() },
-                     RxPermissions.Builder.PermissionDialogCancle { permissionRefuse() },
-                     RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
-                     RxPermissionEmpty(Manifest.permission.CAMERA, "相机", R.mipmap.rx_permission_camera_icon)
-             ).build()
-         })
+        /*showtoast.setOnClickListener({
+            RxPermissions.with(this).initDialogPermission(
+                    RxPermissions.Builder.Requestpermissionself { permissionAllow() },
+                    RxPermissions.Builder.PermissionDialogCancle { permissionRefuse() },
+                    RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
+                    RxPermissionEmpty(Manifest.permission.CAMERA, "相机", R.mipmap.rx_permission_camera_icon),
+                    RxPermissionEmpty(Manifest.permission.READ_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
+                    RxPermissionEmpty(Manifest.permission.CALL_PHONE, "电话", R.mipmap.rx_permission_camera_icon),
+                    RxPermissionEmpty(Manifest.permission.READ_SMS, "短信", R.mipmap.rx_permission_calendar_icon),
+                    RxPermissionEmpty(Manifest.permission.SEND_SMS, "短信", R.mipmap.rx_permission_camera_icon)
+            ).build()
+        })*/
     }
 
     override fun permissionAllow() {

@@ -2,6 +2,47 @@
 <resources>
 
     <declare-styleable name="RxRaisedDropButton">
-        <attr name="flatten" format="boolean"/>
+        <attr name="flatten" format="boolean" />
     </declare-styleable>
+
+
+    <!-- flastButton -->
+    <declare-styleable name="RxFlatButton">
+        <attr name="flatButtonMainColor" format="integer" />
+        <!-- Defines the height of the border bottom of the button -->
+        <attr name="flatButtonBlockButtonEffectHeight" format="dimension" />
+        <attr name="flatButtonFontFamily" format="string" />
+        <attr name="flatButtonFontWeight" format="string" />
+        <attr name="flatButtonFontExtension" format="string" />
+        <attr name="flatButtonTextAppearance" format="integer">
+            <enum name="none" value="0" />
+            <enum name="dark" value="1" />
+            <enum name="light" value="2" />
+        </attr>
+        <attr name="flatButtonRadius" format="dimension" />
+        <attr name="flatButtonBorderWidth" format="dimension" />
+        <attr name="flatButtonSize" format="dimension" />
+        <attr name="flatButtonTouchEffect" format="integer">
+            <enum name="none" value="0" />
+            <enum name="ease" value="1" />
+            <enum name="ripple" value="2" />
+        </attr>
+        <attr name="flatButtonDotMargin" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RxSlider">
+        <attr name="rxSliderToastRadius" format="integer"/>
+        <attr name="rxSliderToastShowWay" format="integer">
+            <enum name="above" value="0"/>
+            <enum name="below" value="1"/>
+        </attr>
+        <attr name="rxSliderIsShowToast" format="boolean"/>
+        <attr name="rxSliderToastShape" format="integer">
+            <enum name="RoundedRectangleIndicator" value="0"/>
+        </attr>
+        <attr name="rxSliderToastText" format="string"/>
+    </declare-styleable>
+
+
 </resources>

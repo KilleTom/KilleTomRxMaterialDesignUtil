@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PermissionDemoActivity"
+    android:background="@android:color/transparent">
+    <LinearLayout
+        android:id="@+id/ss"
+        android:layout_alignLeft="@id/rxslidr"
+        android:layout_alignRight="@id/rxslidr"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/darkblue"/>
+    </LinearLayout>
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast
+        android:id="@+id/rxslidr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rxSliderToastText="123456"
+        android:layout_margin="60dp"
+        >
+    </cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast>
+
+
+
+</RelativeLayout>
