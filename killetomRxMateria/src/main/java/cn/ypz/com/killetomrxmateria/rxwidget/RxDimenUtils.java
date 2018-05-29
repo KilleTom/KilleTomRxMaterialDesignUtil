@@ -17,6 +17,10 @@ public class RxDimenUtils {
         return (int) px;
     }
 
+    public static int spToPx(float sp,Resources resources){
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp,resources.getDisplayMetrics());
+    }
+
     public static float getTextWidth(TextPaint paint,String str) {
         return paint.measureText(str);//文字宽
 

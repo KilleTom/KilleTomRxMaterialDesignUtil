@@ -4,35 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PermissionDemoActivity"
-    android:background="@android:color/transparent">
-    <LinearLayout
-        android:id="@+id/ss"
-        android:layout_alignLeft="@id/rxslidr"
-        android:layout_alignRight="@id/rxslidr"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/darkblue"/>
-    </LinearLayout>
+    tools:context=".PermissionDemoActivity">
+    <!-- <LinearLayout
+         android:id="@+id/ss"
+         android:layout_alignLeft="@id/rxslidr"
+         android:layout_alignRight="@id/rxslidr"
+         android:layout_width="wrap_content"
+         android:layout_height="100dp"
+         android:orientation="horizontal">
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"/>
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:background="@color/darkblue"/>
+     </LinearLayout>
 
-    <cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast
-        android:id="@+id/rxslidr"
+     <cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast
+         android:id="@+id/rxslidr"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:rxSliderToastText="123456"
+         android:layout_margin="60dp"
+         >
+     </cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast>-->
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekbar
+        android:id="@+id/slider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:rxSliderToastText="123456"
-        android:layout_margin="60dp"
-        >
-    </cn.ypz.com.killetomrxmateria.rxwidget.RxSliderToast>
-
+        android:layout_centerInParent="true"
+        app:anneIsShowToast="true"
+        app:anneProgressColor="@color/peru"
+        app:anneReadyProgressColor="@color/peru"
+        app:anneThumbIndicatorColor="@color/darkblue"
+        app:anneToastRadius="2dp"
+        app:anneToastShape="CirlueIndicator"
+        app:anneToastTextSize="15sp" />
 
 
 </RelativeLayout>
