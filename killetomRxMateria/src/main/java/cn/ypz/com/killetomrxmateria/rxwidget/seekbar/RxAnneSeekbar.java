@@ -425,7 +425,6 @@ public class RxAnneSeekbar extends View {
             canvas.drawRoundRect(this.getX(), this.getY(),
                     textWidth + dp10 + this.getX(), this.getY() + textHeight + dp10,
                     toastRadius, toastRadius, shapePaint);//第二个参数是x半径，第三个参数是y半径
-
             canvas.drawText(message, textCenterX, getY() + dp10 / 2 + textHeight, textPaint);
 
         }
