@@ -1,10 +1,13 @@
 # KilleTomRxMaterialDesignUtil
-# KilleTomRxMaterialDesignUtil
-增加自定义RaiseButton
+自定义RaiseButton
+
 分别为RxRaisedDropButton 、RxRaisedDropImageButton
+
 使用方式 
+
 先声明style：
     <style name="RxRaisedDropButtonPrimaryStyle" parent="Base.Widget.AppCompat.Button.Colored">
+    
         <!--设置点亮的动画颜色-->
         <item name="android:colorControlHighlight">#DA6954</item>
         <!--设置正常背景颜色颜色-->
@@ -13,15 +16,15 @@
         <item name="android:colorButtonNormal">@color/colorAccent</item>
     </style>
 其次引用Theme
-   <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
         android:id="@+id/showtoast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/RxRaisedDropPrimaryStyle"
         android:text="DIY has Ripper"
         android:layout_margin="10dp"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_gravity="center_horizontal"/>
     <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropImageButton
         android:layout_width="60dp"
         android:layout_height="55dp"
@@ -30,6 +33,7 @@
         android:src="@drawable/ic_black_24dp"
         android:theme="@style/RxRaisedDropPrimaryStyle"
         android:layout_margin="10dp"/>
+        
 如果不需要Z轴动画变化可以将Z轴设置0dp
 调用方法如下：
     public void setHeightLightEvetion(int dimenId){
@@ -50,36 +54,55 @@ public enum RxToastType {
 //方法1设置显示信息以及显示类型
  public static Toast choseType(RxToastType rxToastType, @NonNull Context context, @NonNull CharSequence message)
 //方法2设置显示信息、显示时间以及显示类型
- public static Toast choseType(RxToastType rxToastType, @NonNull Context context,
- @NonNull CharSequence message, int duration) 
+ public static Toast choseType(RxToastType rxToastType, @NonNull Context context,@NonNull CharSequence message, int duration) 
 //方法3设置显示信息、显示时间、显示图标以及显示类型
+
  public static Toast choseType(RxToastType rxToastType, @NonNull Context context,  
  @NonNull CharSequence message, int duration, RxToastIcon toastImage)
+ 
 //方法4设置显示信息、显示时间、显示图标、背景颜色以及显示类型
+
  public static Toast custom(@NonNull Context context, @NonNull CharSequence charSequence, 
  int duration, @ColorInt int bgColor, RxToastIcon toastImage) 
+ 
 //方法5设置显示信息、显示时间、显示图标、背景颜色、继承显示文本的文本动画以及显示类型
+
  public static Toast custom(@NonNull Context context, @NonNull RxToastText text, int duration, @ColorInt int bgColor, RxToastIcon toastImage)
+ 
 然后直接调用show方法即可显示
+
 //配置者模式调用config模式调用：
+
 //初始化所有配置清单属性包括颜色、文字大小等属性
+
  public static void reset()
+ 
 //更改四大显示模式下对应的背景颜色
-//错误模式下背景颜色        
+//错误模式下背景颜色   
   public Config setErrorColor(@ColorInt int errorColor)
 //信息模式下背景颜色
   public Config setInfoColor(@ColorInt int infoColor)
 //成功模式下背景颜色
+
   public Config setSuccessColor(@ColorInt int successColor)
+  
 //警告模式下背景颜色
+
   public Config setWarningColor(@ColorInt int warningColor)
+  
 //设置字体的样式
+
   public Config setToastTypeface(@NonNull Typeface typeface)
+  
 //设置字体大小
+
   public Config setTextSize(int sizeInSp)
 //设置是否显示绘制的图标
+
   public Config tintIcon(boolean tintIcon)
+  
 //设置是否文字及图标启动动画
+
   public Config setUseAnim(boolean useAnim) 
 //不需要过多的设置的情况下可以直接调用如下这一个方法
   public Config show(RxToastType rxToastType, @NonNull Context context, @NonNull CharSequence message)
