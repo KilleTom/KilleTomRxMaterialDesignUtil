@@ -76,6 +76,7 @@
 
     public static Toast custom(@NonNull Context context, @NonNull RxToastText text, int duration, @ColorInt int bgColor, RxToastIcon toastImage)
  
+
 然后直接调用show方法即可显示
 
 //配置者模式调用config模式调用：
@@ -135,7 +136,9 @@
                 .setTextColor(resources.getColor(R.color.red))
                 .setTextSize(15)
                 .apply()
-权限模式简化申请
-分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限的弹窗的弹窗但是带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗
-使用该功能的时候可以选择继承RxPermissionBaseActivity()重写一些方法即可免去写权限回调结果的判断
-如果不想继承RxPermissionBaseActivity()则需要重写回调结果，回调结果的requestCode值为1
+                
+权限模式简化申请：
+
+分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限的弹窗的弹窗但是带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
+
+使用该功能的时候可以选择继承RxPermissionBaseActivity()重写一些方法即可免去写权限回调结果的判断，如果不想继承RxPermissionBaseActivity()则需要重写回调结果，回调结果的requestCode值为1需要对它进行会调处理
