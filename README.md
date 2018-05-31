@@ -41,7 +41,7 @@
         mDelegate.setViewHeightLightElevation(dimenId);
     }
     
-自定义Toast并支持链式调用
+#自定义Toast并支持链式调用
 默认有5种模式如下
 
     public enum RxToastType {
@@ -137,7 +137,7 @@
                 .setTextSize(15)
                 .apply()
                 
-权限模式简化申请：
+#权限模式简化申请：
 
 分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限的弹窗的弹窗但是带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
 
