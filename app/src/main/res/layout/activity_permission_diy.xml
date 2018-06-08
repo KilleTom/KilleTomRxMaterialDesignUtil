@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PermissionDemoActivity">
+    tools:context=".PermissionDIYActivity">
 
     <Button
         android:id="@+id/p_dialog"
@@ -30,25 +30,5 @@
         android:layout_gravity="center_horizontal"
         android:text="通过base方法申请"
         android:layout_marginTop="20dp"/>
-
-
-   <!-- <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
-        android:id="@+id/slider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:anneIsShowToast="true"
-        app:anneProgressColor="@color/peru"
-        app:anneReadyProgressColor="@color/mediumvioletred"
-        app:anneThumbIndicatorColor="@color/darkblue"
-        app:anneToastRadius="2dp"
-        app:anneMax="100"
-        app:anneProgress="1"
-        app:anneToastShowWay="above"
-        app:anneThumbIndicator="RoundedRectangleIndicator"
-        app:anneAverage="4"
-        app:anneToastShape="CircleShape"
-        app:anneToastTextSize="15sp" />-->
-
 
 </LinearLayout>

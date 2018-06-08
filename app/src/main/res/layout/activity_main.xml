@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+        <Button
+            android:id="@+id/raise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RaiseButton"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/flatb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FlatbButton"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/permission1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="easyPermission"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/permission2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIYPermission"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="toast"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="seekbar"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</ScrollView>

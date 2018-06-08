@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nsv"
+    android:orientation="vertical"
+    tools:context=".SeekBarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="默认" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneMax="100"
+            app:anneProgress="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="修改进度颜色及未完成进度颜色、指示器颜色\nXml设置" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneProgress="10"
+            app:anneProgressColor="@color/bisque"
+            app:anneReadyProgressColor="@color/violet"
+            app:anneThumbIndicatorColor="@color/dimgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="代码设置" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:id="@+id/anner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="设置平均点\n例如二分之则设置为1\n平均分为多少份就总份数减去一\nXml设置" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneAverage="2"
+            app:anneAverageIndicator="CircleIndicator"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="代码设置" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:id="@+id/anner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneAverageIndicator="RoundedRectangleIndicator"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="圆角矩形指示器" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneThumbIndicator="RoundedRectangleIndicator"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="圆角矩形提示框" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneIsShowToast="true"
+            app:anneToastShape="RoundedRectangleShape"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="需要设置气泡信息显示必须在布局上\nxml设置为anneIsShowToast=true\n或者代码设置为true\n代码设置的方式必须重新使用代码设置气泡相关样式\n否则气泡会为默认样式\n信息提示框信息面前带标记显示" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneIsShowToast="true"
+            app:anneToastShape="CircleShape"
+            app:anneToastTextTag="你好啊我是Tag"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="信息提示框自定义信息进度显示" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:id="@+id/anne3"
+            app:anneIsShowToast="true"
+            app:anneToastShape="RoundedRectangleShape"
+            app:anneToastRadius="8dp"
+            app:anneToastTextColor="@color/dimgray"
+            app:anneToastShapeColor="@color/deepskyblue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="圆形提示框" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneIsShowToast="true"
+            app:anneToastShape="CircleShape"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="提示框位置在上面" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneIsShowToast="true"
+            app:anneToastShowWay="above"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="提示框位置在下面" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneIsShowToast="true"
+            app:anneToastShowWay="below"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="提示框位置居中覆盖指示器" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:anneIsShowToast="true"
+            app:anneToastShowWay="center"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

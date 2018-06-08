@@ -62,7 +62,6 @@
                                               <map>
                                                 <entry key="color" value="ffcc99" />
                                                 <entry key="paddingPercent" value="15" />
-                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -73,7 +72,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/I:/AS3.0/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_more_horiz_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/I:/AS3.0/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_movie_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -94,8 +93,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="rx_permission_more" />
+                                      <entry key="cropped" value="true" />
+                                      <entry key="iconShape" value="HRECT" />
+                                      <entry key="outputName" value="rx_permission_" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -118,7 +118,24 @@
         </entry>
         <entry key="vectorWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="values">
+                          <map>
+                            <entry key="outputName" value="ic_black_24dp" />
+                            <entry key="sourceFile" value="C:\Users\kingadmin" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
       </map>

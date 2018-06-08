@@ -24,7 +24,7 @@ public class RxPermissions {
         /**
          * 如果init前的权限已经存在不需要申请则
          */
-        public interface Requestpermissionself {
+        public interface RequestpermissionSelf {
             void self();
         }
 
@@ -37,7 +37,7 @@ public class RxPermissions {
             permissionList = new ArrayList<>();
         }
 
-        public void baseNoDialogInitPerission(Requestpermissionself requestPermissionSelf, String... permissions) {
+        public void baseNoDialogInitPerission(RequestpermissionSelf requestPermissionSelf, String... permissions) {
             for (String perission : permissions)
                 if (!permissionList.contains(perission)) permissionList.add(perission);
             initPermission(requestPermissionSelf);
@@ -50,7 +50,7 @@ public class RxPermissions {
             return this;
         }
 
-        public void initPermission(Requestpermissionself requestPermissionSelf) {
+        public void initPermission(RequestpermissionSelf requestPermissionSelf) {
             List<String> list = new ArrayList<>();
             for (String permission : permissionList) {
                 if (!checkPermission(permission))
@@ -63,7 +63,7 @@ public class RxPermissions {
 
         }
 
-        public RxPermissionDialog.Builder initDialogPermission(Requestpermissionself requestPermissionSelf, PermissionDialogCancle permissionDialogCancle, RxPermissionEmpty... permissionEmpties) {
+        public RxPermissionDialog.Builder initDialogPermission(RequestpermissionSelf requestPermissionSelf, PermissionDialogCancle permissionDialogCancle, RxPermissionEmpty... permissionEmpties) {
             this.rxPermissionEmpties = new ArrayList<>();
             List<String> permissions = new ArrayList<>();
             for (RxPermissionEmpty rxPermissionEmpty : permissionEmpties) {

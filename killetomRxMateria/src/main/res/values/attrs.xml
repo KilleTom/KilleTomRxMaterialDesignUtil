@@ -50,7 +50,7 @@
         <attr name="rxSliderIn" format="float"/>
     </declare-styleable>
 
-    <declare-styleable name="RxAnneSeekbar">
+    <declare-styleable name="RxAnneSeekBar">
         <attr name="anneToastTextSize" format="dimension"/>
         <attr name="anneToastRadius" format="dimension"/>
         <attr name="anneToastShowWay" format="integer">
@@ -60,8 +60,8 @@
         </attr>
         <attr name="anneIsShowToast" format="boolean"/>
         <attr name="anneToastShape" format="integer">
-            <enum name="RoundedRectangleIndicator" value="0"/>
-            <enum name="CirlueIndicator" value="1"/>
+            <enum name="RoundedRectangleShape" value="0"/>
+            <enum name="CircleShape" value="1"/>
         </attr>
         <attr name="anneToastTextTag" format="string"/>
         <attr name="anneToastTextColor" format="color"/>
@@ -71,12 +71,15 @@
         <attr name="anneAverage" format="integer" />
         <attr name="anneAverageIndicator" format="integer">
             <enum name="RoundedRectangleIndicator" value="0"/>
+            <enum name="CircleIndicator" value="1"/>
         </attr>
         <attr name="anneThumbIndicator" format="integer">
             <enum name="RoundedRectangleIndicator" value="0"/>
-            <enum name="CirlueIndicator" value="1"/>
+            <enum name="CircleIndicator" value="1"/>
         </attr>
         <attr name="anneThumbIndicatorColor" format="color"/>
+        <attr name="anneProgress" format="float"/>
+        <attr name="anneMax" format="float"/>
     </declare-styleable>
 
 

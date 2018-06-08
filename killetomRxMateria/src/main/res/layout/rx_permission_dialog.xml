@@ -48,7 +48,7 @@
         android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
-        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxflatButton
+        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxFlatButton
             android:id="@+id/rx_p_d_sure"
             style="@style/RxPermissionButtonStysle"
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
 
 
 
-        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxflatButton
+        <cn.ypz.com.killetomrxmateria.rxwidget.flatbutton.RxFlatButton
             android:id="@+id/rx_p_d_cancle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

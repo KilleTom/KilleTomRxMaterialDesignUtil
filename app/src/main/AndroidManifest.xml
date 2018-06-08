@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -12,16 +16,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MasterActivity">
-
-        </activity>
-        <activity android:name=".PermissionDemoActivity">
+        <activity android:name=".MasterActivity" />
+        <activity
+            android:name=".PermissionDemoActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PermissionDIYActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ToastActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".SeekBarActivity"></activity>
     </application>
 
 </manifest>

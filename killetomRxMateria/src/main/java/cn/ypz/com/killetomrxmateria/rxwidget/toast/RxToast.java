@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.CheckResult;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
-import android.util.Log;
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
@@ -31,7 +31,7 @@ public class RxToast {
     @ColorInt
     public static int DEFAULT_TEXT_COLOR = Color.parseColor("#FFFFFF");
     @ColorInt
-    public static int ERROR_COLOR = Color.parseColor("#D50000");
+    public static int ERROR_COLOR = Color.parseColor("#DC143C");
     @ColorInt
     public static int INFO_COLOR = Color.parseColor("#3F51B5");
     @ColorInt
@@ -40,12 +40,12 @@ public class RxToast {
     public static int WARNING_COLOR = Color.parseColor("#FFA900");
     @ColorInt
     public static int NORMAL_COLOR = Color.parseColor("#353A3E");
-
-    public static int NO_COLOR = 0;
+    @ColorInt
+    private static int NO_COLOR = 0;
 
     private static final Typeface LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
     private static Typeface currentTypeface = LOADED_TOAST_TYPEFACE;
-    public static int textSize = 16; // in SP
+    public static int textSize = 16;
 
     private static boolean tintIcon = true;
     private static boolean useAnim = true;
@@ -67,7 +67,6 @@ public class RxToast {
     @CheckResult
     public static Toast choseType(RxToastType rxToastType, @NonNull Context context, @NonNull CharSequence message, int duration, RxToastIcon toastImage) {
         boolean isResetIcon = false;
-        Log.i("ypz", String.valueOf(rxToastType) + tintIcon);
         if (rxToastType != RxToastType.RxToastNormalType && tintIcon && toastImage == null)
             isResetIcon = true;
         switch (rxToastType) {
@@ -96,7 +95,6 @@ public class RxToast {
     @CheckResult
     @SuppressLint("ShowToast")
     public static Toast custom(@NonNull Context context, @NonNull CharSequence charSequence, int duration, @ColorInt int bgColor, RxToastIcon toastImage) {
-        //init TextView
         final RxToastTextFade toastTextView = new RxToastTextFade(context);
         toastTextView.setGravity(Gravity.CENTER);
         toastTextView.setText(charSequence);
@@ -110,7 +108,6 @@ public class RxToast {
     @SuppressLint("ShowToast")
     public static Toast custom(@NonNull Context context, @NonNull RxToastText text, int duration, @ColorInt int bgColor, RxToastIcon toastImage) {
         final Toast toast = Toast.makeText(context, "", duration);
-        //init LinearLayout
         final LinearLayout toastLayout = new LinearLayout(context);
         toastLayout.setOrientation(LinearLayout.HORIZONTAL);
         toastLayout.setGravity(Gravity.CENTER);
@@ -185,7 +182,7 @@ public class RxToast {
 
         public static void reset() {
             RxToast.DEFAULT_TEXT_COLOR = Color.parseColor("#FFFFFF");
-            RxToast.ERROR_COLOR = Color.parseColor("#D50000");
+            RxToast.ERROR_COLOR = Color.parseColor("#DC143C");
             RxToast.INFO_COLOR = Color.parseColor("#3F51B5");
             RxToast.SUCCESS_COLOR = Color.parseColor("#388E3C");
             RxToast.WARNING_COLOR = Color.parseColor("#FFA900");
@@ -267,10 +264,11 @@ public class RxToast {
         }
 
         public Config show(RxToastType rxToastType, @NonNull Context context, @NonNull CharSequence message) {
-            Log.i("ypz", String.valueOf(toast));
+            //Log.i("ypz", String.valueOf(toast));
             RxToast.tintIcon = tintIcon;
+            message = TextUtils.isEmpty(message)?"":message;
             toast = choseType(rxToastType, context, message);
-            Log.i("ypz", String.valueOf(toast));
+            //Log.i("ypz", String.valueOf(toast));
             return this;
         }
     }
