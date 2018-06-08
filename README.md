@@ -71,7 +71,8 @@
 //方法4设置显示信息、显示时间、显示图标、背景颜色以及显示类型
 
     public static Toast custom(@NonNull Context context, @NonNull CharSequence charSequence, int duration, @ColorInt int bgColor, RxToastIcon toastImage) 
- 
+
+
 //方法5设置显示信息、显示时间、显示图标、背景颜色、继承显示文本的文本动画以及显示类型
 
     public static Toast custom(@NonNull Context context, @NonNull RxToastText text, int duration, @ColorInt int bgColor, RxToastIcon toastImage)
@@ -142,3 +143,151 @@
 分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限的弹窗的弹窗但是带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
 
 使用该功能的时候可以选择继承RxPermissionBaseActivity()重写一些方法即可免去写权限回调结果的判断，如果不想继承RxPermissionBaseActivity()则需要重写回调结果，回调结果的requestCode值为1需要对它进行会调处理
+RxPermissionBaseActivity()重写方法如下
+
+    override fun permissionAllow() {
+        RxToast.Config.getInstance().show(RxToastType.RxToastSuccessType, this, "成功").apply()
+    }
+
+    override fun permissionRefuse() {
+        RxToast.Config.getInstance().show(RxToastType.RxToastWarningType, this, "取消权限部分授权").apply()
+    }
+
+    override fun requestCodeError(requestCode: Int) {
+        RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "取消授权").apply()
+    }
+  
+ 然后这样使用：
+ 
+     private fun dialog() {
+     //弹窗代码示例
+        RxPermissions.with(this).initDialogPermission(
+                RxPermissions.Builder.RequestpermissionSelf { permissionAllow() },
+                RxPermissions.Builder.PermissionDialogCancle { permissionRefuse() },
+                RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_storage_icon),
+                RxPermissionEmpty(Manifest.permission.CAMERA, "相机", R.mipmap.rx_permission_camera_icon),
+                RxPermissionEmpty(Manifest.permission.READ_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_storage_icon),
+                RxPermissionEmpty(Manifest.permission.CALL_PHONE, "电话", R.mipmap.rx_permission_phone_icon),
+                RxPermissionEmpty(Manifest.permission.READ_SMS, "短信", R.mipmap.rx_permission_sms_icon),
+                RxPermissionEmpty(Manifest.permission.SEND_SMS, "短信", R.mipmap.rx_permission_sms_icon)
+        ).build()
+    }
+
+    private fun noDialog1() {
+        RxPermissions.with(this)
+                .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .addPermission(Manifest.permission.CAMERA)
+                .initPermission { permissionAllow() }
+    }
+    //以下及以上两种不弹窗代码示例
+    private fun noDialog2() {
+        RxPermissions.with(this)
+                .baseNoDialogInitPerission(
+                        RxPermissions.Builder.RequestpermissionSelf { permissionAllow() },
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.CALL_PHONE
+                )
+    }
+ 
+不继承需要实现两个接口如下:
+
+        public interface RequestpermissionSelf {
+            void self();
+        }
+
+        public interface PermissionDialogCancle {
+            void cancle();
+        }
+        
+然后这样编写：
+
+    private fun noDialog1() {
+        RxPermissions.with(this)
+                .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .addPermission(Manifest.permission.CAMERA)
+                .initPermission { this.self() }
+    }
+    //以下及以上两种不弹窗代码示例
+    private fun noDialog2() {
+        RxPermissions.with(this)
+                .baseNoDialogInitPerission(
+                        RxPermissions.Builder.RequestpermissionSelf { this.self() },
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.CALL_PHONE
+                )
+    }
+    //弹窗代码示例
+    private fun dialog() {
+        RxPermissions.with(this).initDialogPermission(
+                RxPermissions.Builder.RequestpermissionSelf { this.self() },
+                RxPermissions.Builder.PermissionDialogCancle { this.cancle() },
+                RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
+                RxPermissionEmpty(Manifest.permission.CAMERA, "相机", R.mipmap.rx_permission_camera_icon),
+                RxPermissionEmpty(Manifest.permission.READ_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
+                RxPermissionEmpty(Manifest.permission.CALL_PHONE, "电话", R.mipmap.rx_permission_camera_icon),
+                RxPermissionEmpty(Manifest.permission.READ_SMS, "短信", R.mipmap.rx_permission_calendar_icon),
+                RxPermissionEmpty(Manifest.permission.SEND_SMS, "短信", R.mipmap.rx_permission_camera_icon)
+        ).build()
+    }
+    //权限结果回调判断
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1)
+            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                RxToast.Config.getInstance().show(RxToastType.RxToastSuccessType, this, "获取到权限了").apply()
+            else
+                RxToast.Config.getInstance().show(RxToastType.RxToastWarningType, this, "有些权限用户没有允许").apply()
+        else
+            RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "权限获取错误").apply()
+    }
+    
+#RxAnneSeekBar部分示例
+更多示例请去查阅代码源码也有注释讲解
+
+        anner1.max = 100F
+        anner1.progress = 11F
+        //手动设置进度及指示器相关颜色
+        anner1.setProgressColor(R.color.bisque)
+        anner1.setReadyColor(R.color.violet)
+        anner1.setThumbIndicatorColor(R.color.dimgray)
+        //设置平均分为四份长度
+        anner2.setAverage(3)
+        anne3.setExpandProgressMessage(rxAnnerExpandProgressMessage)
+        anne3.hideAnneToast()
+        nsv.setOnTouchListener(View.OnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_MOVE) {
+                if (event.action == MotionEvent.ACTION_DOWN) {
+                    X = event.x
+                    Y = event.y
+                    return@OnTouchListener false
+                }
+            }
+            return@OnTouchListener false
+        })
+    
+    <--！"修改进度颜色及未完成进度颜色、指示器颜色" -->
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneProgress="10"
+            app:anneProgressColor="@color/bisque"
+            app:anneReadyProgressColor="@color/violet"
+            app:anneThumbIndicatorColor="@color/dimgray" />
+            
+        <--！"设置平均点n例如二分之则设置为1平均分为多少份就总份数减去一" -->  
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneAverage="2"
+            app:anneAverageIndicator="CircleIndicator"/>
+        <--！"圆角矩形指示器一" -->  
+        <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:anneThumbIndicator="RoundedRectangleIndicator"/>
+
+    
+    
