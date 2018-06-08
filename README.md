@@ -1,13 +1,11 @@
 # KilleTomRxMaterialDesignUtil
-自定义RaiseButton
+依赖方式：https://jitpack.io/#KilleTom/KilleTomRxMaterialDesignUtil 这个网站会告诉你有多少个版本以及你选择哪个版本进行依赖，多种依赖方式供你选择
 
-分别为RxRaisedDropButton 、RxRaisedDropImageButton
-
-使用方式 
+自定义RaiseButton分别为RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
 
 先声明style：
+
     <style name="RxRaisedDropButtonPrimaryStyle" parent="Base.Widget.AppCompat.Button.Colored">
-    
         <!--设置点亮的动画颜色-->
         <item name="android:colorControlHighlight">#DA6954</item>
         <!--设置正常背景颜色颜色-->
@@ -32,8 +30,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_black_24dp"
         android:theme="@style/RxRaisedDropPrimaryStyle"
-        android:layout_margin="10dp"/>
-        
+        android:layout_margin="10dp"/> 
 如果不需要Z轴动画变化可以将Z轴设置0dp
 调用方法如下：
 
@@ -50,8 +47,7 @@
         RxToastErrorType,//错误模式
         RxToastInfoType,//信息模式
         RxToastWarningType//警告模式
-    }
-    
+    } 
 调用方法如下：
 
 //直接调用返回一个Toast对象
@@ -72,12 +68,10 @@
 
     public static Toast custom(@NonNull Context context, @NonNull CharSequence charSequence, int duration, @ColorInt int bgColor, RxToastIcon toastImage) 
 
-
 //方法5设置显示信息、显示时间、显示图标、背景颜色、继承显示文本的文本动画以及显示类型
 
     public static Toast custom(@NonNull Context context, @NonNull RxToastText text, int duration, @ColorInt int bgColor, RxToastIcon toastImage)
  
-
 然后直接调用show方法即可显示
 
 //配置者模式调用config模式调用：
