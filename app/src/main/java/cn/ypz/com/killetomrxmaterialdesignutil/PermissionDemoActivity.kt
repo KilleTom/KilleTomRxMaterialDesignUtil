@@ -36,12 +36,12 @@ class PermissionDemoActivity : RxPermissionBaseActivity() {
         RxPermissions.with(this).initDialogPermission(
                 RxPermissions.Builder.RequestpermissionSelf { permissionAllow() },
                 RxPermissions.Builder.PermissionDialogCancle { permissionRefuse() },
-                RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
+                RxPermissionEmpty(Manifest.permission.WRITE_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_storage_icon),
                 RxPermissionEmpty(Manifest.permission.CAMERA, "相机", R.mipmap.rx_permission_camera_icon),
-                RxPermissionEmpty(Manifest.permission.READ_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_calendar_icon),
-                RxPermissionEmpty(Manifest.permission.CALL_PHONE, "电话", R.mipmap.rx_permission_camera_icon),
-                RxPermissionEmpty(Manifest.permission.READ_SMS, "短信", R.mipmap.rx_permission_calendar_icon),
-                RxPermissionEmpty(Manifest.permission.SEND_SMS, "短信", R.mipmap.rx_permission_camera_icon)
+                RxPermissionEmpty(Manifest.permission.READ_EXTERNAL_STORAGE, "文件", R.mipmap.rx_permission_storage_icon),
+                RxPermissionEmpty(Manifest.permission.CALL_PHONE, "电话", R.mipmap.rx_permission_phone_icon),
+                RxPermissionEmpty(Manifest.permission.READ_SMS, "短信", R.mipmap.rx_permission_sms_icon),
+                RxPermissionEmpty(Manifest.permission.SEND_SMS, "短信", R.mipmap.rx_permission_sms_icon)
         ).build()
     }
 
