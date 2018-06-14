@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:exthanspider="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_row="10"
+            android:rowOrderPreserved="true"
+            tools:context=".SpiderWebActivity">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="默认" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:maxScore="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="带分数及蛛网描边" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:id="@+id/spier"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:isGradientSpider="false"
+                    app:isScoreStroke="true"
+                    app:isSpiderStroke="true"
+                    app:maxScore="10"
+                    app:scoreStrokeWidth="3dp"
+                    app:spiderStokeBg="@color/turquoise"
+                    app:spiderStrokeWidth="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="角度不偏移" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:angleCount="4"
+                    app:isGradientSpider="true"
+                    app:maxScore="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="角度偏移" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:angleCount="4"
+                    app:isComplexOffset="true"
+                    app:isGradientSpider="true"
+                    app:maxScore="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="变色蜘蛛网" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:id="@+id/siper_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:angleCount="5"
+                    app:hierarchyCount="150"
+                    app:isGradientSpider="true"
+                    app:maxScore="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="10dp"
+                android:layout_row="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="设置变色蜘蛛网" />
+
+                <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:angleCount="8"
+                    app:hierarchyCount="12"
+                    app:isGradientSpider="true"
+                    app:maxScore="10"
+                    app:spiderBg="@color/seagreen"
+                    app:spiderEndBg="@color/turquoise" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="布局自带蛛网控件并显示分数" />
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+            <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxSpiderWebLayout
+                android:id="@+id/spider_layout"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:angleCount="10"
+                android:clipChildren="false"
+                app:isBuildInSpider="true"
+                exthanspider:maxScore="10" />
+        </FrameLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="布局自带蛛网控件并显示分数\n自定义蛛网上下margin" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxSpiderWebLayout
+            android:id="@+id/spider_layout2"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:clipChildren="false"
+            android:layout_gravity="center_horizontal"
+            app:angleCount="8"
+            app:isBuildInSpider="true"
+            app:isSpiderStroke="true"
+            android:layout_margin="10dp"
+            app:spiderMargin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="不使用自带方式配合一起使用显示分数" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:clipChildren="false"
+            android:layout_marginTop="20dp">
+
+            <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxEthanSpiderWeb
+                android:id="@+id/spider3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:maxScore="10"
+                app:isGradientSpider="true"
+                app:angleCount="8"
+                app:spiderBg="@color/seagreen"
+                app:spiderEndBg="@color/turquoise"
+                app:scoreBg="@color/darkslategray"
+                app:hierarchyCount="20"/>
+
+            <cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxSpiderWebLayout
+                android:id="@+id/spider_layout3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:clipChildren="false"
+                 />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

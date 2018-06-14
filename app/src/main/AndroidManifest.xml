@@ -23,11 +23,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PermissionDIYActivity"
@@ -35,7 +31,13 @@
         <activity
             android:name=".ToastActivity"
             android:launchMode="singleInstance" />
-        <activity android:name=".SeekBarActivity"></activity>
+        <activity android:name=".SeekBarActivity" />
+        <activity android:name=".SpiderWebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

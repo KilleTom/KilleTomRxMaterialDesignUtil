@@ -5,7 +5,6 @@
         <attr name="flatten" format="boolean" />
     </declare-styleable>
 
-
     <!-- flastButton -->
     <declare-styleable name="RxFlatButton">
         <attr name="flatButtonMainColor" format="integer" />
@@ -30,56 +29,113 @@
         <attr name="flatButtonDotMargin" format="dimension" />
     </declare-styleable>
 
-
     <declare-styleable name="RxSlider">
-        <attr name="rxSliderToastRadius" format="integer"/>
+        <attr name="rxSliderToastRadius" format="integer" />
         <attr name="rxSliderToastShowWay" format="integer">
-            <enum name="above" value="0"/>
-            <enum name="below" value="1"/>
+            <enum name="above" value="0" />
+            <enum name="below" value="1" />
         </attr>
-        <attr name="rxSliderIsShowToast" format="boolean"/>
+        <attr name="rxSliderIsShowToast" format="boolean" />
         <attr name="rxSliderToastShape" format="integer">
-            <enum name="RoundedRectangleIndicator" value="0"/>
+            <enum name="RoundedRectangleIndicator" value="0" />
         </attr>
-        <attr name="rxSliderToastText" format="string"/>
-        <attr name="rxSliderToastTextColor" format="color"/>
-        <attr name="rxSliderToastShapeColor" format="color"/>
-        <attr name="rxSliderProgressColor" format="color"/>
-        <attr name="rxSliderMax" format="float"/>
-        <attr name="rxSliderMin" format="float"/>
-        <attr name="rxSliderIn" format="float"/>
+        <attr name="rxSliderToastText" format="string" />
+        <attr name="rxSliderToastTextColor" format="color" />
+        <attr name="rxSliderToastShapeColor" format="color" />
+        <attr name="rxSliderProgressColor" format="color" />
+        <attr name="rxSliderMax" format="float" />
+        <attr name="rxSliderMin" format="float" />
+        <attr name="rxSliderIn" format="float" />
     </declare-styleable>
 
     <declare-styleable name="RxAnneSeekBar">
-        <attr name="anneToastTextSize" format="dimension"/>
-        <attr name="anneToastRadius" format="dimension"/>
+        <attr name="anneToastTextSize" format="dimension" />
+        <attr name="anneToastRadius" format="dimension" />
         <attr name="anneToastShowWay" format="integer">
-            <enum name="above" value="0"/>
-            <enum name="below" value="1"/>
-            <enum name="center" value="2"/>
+            <enum name="above" value="0" />
+            <enum name="below" value="1" />
+            <enum name="center" value="2" />
         </attr>
-        <attr name="anneIsShowToast" format="boolean"/>
+        <attr name="anneIsShowToast" format="boolean" />
         <attr name="anneToastShape" format="integer">
-            <enum name="RoundedRectangleShape" value="0"/>
-            <enum name="CircleShape" value="1"/>
+            <enum name="RoundedRectangleShape" value="0" />
+            <enum name="CircleShape" value="1" />
         </attr>
-        <attr name="anneToastTextTag" format="string"/>
-        <attr name="anneToastTextColor" format="color"/>
-        <attr name="anneToastShapeColor" format="color"/>
-        <attr name="anneReadyProgressColor" format="color"/>
-        <attr name="anneProgressColor" format="color"/>
+        <attr name="anneToastTextTag" format="string" />
+        <attr name="anneToastTextColor" format="color" />
+        <attr name="anneToastShapeColor" format="color" />
+        <attr name="anneReadyProgressColor" format="color" />
+        <attr name="anneProgressColor" format="color" />
         <attr name="anneAverage" format="integer" />
         <attr name="anneAverageIndicator" format="integer">
-            <enum name="RoundedRectangleIndicator" value="0"/>
-            <enum name="CircleIndicator" value="1"/>
+            <enum name="RoundedRectangleIndicator" value="0" />
+            <enum name="CircleIndicator" value="1" />
         </attr>
         <attr name="anneThumbIndicator" format="integer">
-            <enum name="RoundedRectangleIndicator" value="0"/>
-            <enum name="CircleIndicator" value="1"/>
+            <enum name="RoundedRectangleIndicator" value="0" />
+            <enum name="CircleIndicator" value="1" />
         </attr>
-        <attr name="anneThumbIndicatorColor" format="color"/>
-        <attr name="anneProgress" format="float"/>
-        <attr name="anneMax" format="float"/>
+        <attr name="anneThumbIndicatorColor" format="color" />
+        <attr name="anneProgress" format="float" />
+        <attr name="anneMax" format="float" />
+    </declare-styleable>
+
+    <attr name="maxScore" format="float" />
+    <attr name="hierarchyCount" format="integer" />
+    <attr name="angleCount" format="integer" />
+    <attr name="spiderStrokeWidth" format="dimension" />
+    <attr name="scoreStrokeWidth" format="dimension" />
+    <attr name="spiderStokeBg" format="color" />
+    <attr name="spiderBg" format="color" />
+    <attr name="scoreBg" format="color" />
+    <attr name="scoreStokeBg" format="color" />
+    <attr name="isSpiderBg" format="boolean" />
+    <attr name="isScoreBg" format="boolean" />
+    <attr name="isSpiderStroke" format="boolean" />
+    <attr name="isScoreStroke" format="boolean" />
+    <attr name="isComplexOffset" format="boolean" />
+    <attr name="isGradientSpider" format="boolean"/>
+    <attr name="spiderEndBg" format="color"/>
+
+    <declare-styleable name="RxEthanSpiderWeb">
+        <attr name="maxScore" />
+        <attr name="hierarchyCount" />
+        <attr name="angleCount" />
+        <attr name="spiderStrokeWidth" />
+        <attr name="scoreStrokeWidth" />
+        <attr name="spiderStokeBg" />
+        <attr name="spiderBg" />
+        <attr name="spiderEndBg" />
+        <attr name="scoreBg" />
+        <attr name="scoreStokeBg" />
+        <attr name="isSpiderBg" />
+        <attr name="isScoreBg" />
+        <attr name="isSpiderStroke" />
+        <attr name="isScoreStroke" />
+        <attr name="isComplexOffset" />
+        <attr name="isGradientSpider" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RxSpiderWebLayout">
+        <attr name="isBuildInSpider" format="boolean" />
+        <attr name="spiderMargin" format="dimension" />
+        <attr name="maxScore" />
+        <attr name="hierarchyCount" />
+        <attr name="angleCount" />
+        <attr name="spiderStrokeWidth" />
+        <attr name="scoreStrokeWidth" />
+        <attr name="spiderStokeBg" />
+        <attr name="spiderBg" />
+        <attr name="spiderEndBg" />
+        <attr name="scoreBg" />
+        <attr name="scoreStokeBg" />
+        <attr name="isSpiderBg" />
+        <attr name="isScoreBg" />
+        <attr name="isSpiderStroke" />
+        <attr name="isScoreStroke" />
+        <attr name="isComplexOffset" />
+        <attr name="isGradientSpider" />
     </declare-styleable>
 
 
