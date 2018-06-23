@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,8 @@ public class RxPermissions {
     public static RxPermissions.Builder with(Activity activity) {
         return new Builder(activity);
     }
+
+    public static final int RxPermissionRequestCode = 0x96;
 
     public static class Builder {
 
@@ -45,22 +48,24 @@ public class RxPermissions {
 
         public Builder addPermission(@NonNull String permission) {
             if (!permissionList.contains(permission)) {
-                permissionList.add(permission);
+                if (!(ContextCompat.checkSelfPermission(mActivity, permission) == PackageManager.PERMISSION_GRANTED)) {
+                    permissionList.add(permission);
+                }
             }
             return this;
         }
 
         public void initPermission(RequestpermissionSelf requestPermissionSelf) {
-            List<String> list = new ArrayList<>();
+            List<String> permissions = new ArrayList<>();
             for (String permission : permissionList) {
-                if (!checkPermission(permission))
-                    list.add(permission);
-
+                if (!(ContextCompat.checkSelfPermission(mActivity, permission) == PackageManager.PERMISSION_GRANTED)) {
+                    permissions.add(permission);
+                }
             }
-            if (list.size() > 0) {
-                ActivityCompat.requestPermissions(mActivity, list.toArray(new String[list.size()]), 1);
+            int size = permissions.size();
+            if (size > 0) {
+                ActivityCompat.requestPermissions(mActivity, permissions.toArray(new String[size]), RxPermissionRequestCode);
             } else requestPermissionSelf.self();
-
         }
 
         public RxPermissionDialog.Builder initDialogPermission(RequestpermissionSelf requestPermissionSelf, PermissionDialogCancle permissionDialogCancle, RxPermissionEmpty... permissionEmpties) {
@@ -76,7 +81,7 @@ public class RxPermissions {
                 @Override
                 public void requsetPermission() {
                     if (permissions.size() > 0)
-                        ActivityCompat.requestPermissions(mActivity, permissions.toArray(new String[permissions.size()]), 1);
+                        ActivityCompat.requestPermissions(mActivity, permissions.toArray(new String[permissions.size()]), RxPermissionRequestCode);
                     else requestPermissionSelf.self();
                 }
 

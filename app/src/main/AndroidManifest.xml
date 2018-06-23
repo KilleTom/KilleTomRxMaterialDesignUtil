@@ -25,7 +25,6 @@
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -36,8 +35,9 @@
             android:name=".ToastActivity"
             android:launchMode="singleInstance" />
         <activity android:name=".SeekBarActivity" />
-        <activity android:name=".SpiderWebActivity"></activity>
-        <activity android:name=".QRCodeActivity"></activity>
+        <activity android:name=".SpiderWebActivity" />
+        <activity android:name=".QRCodeActivity" />
+        <activity android:name=".PhotoActivity"></activity>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ class MainActivity : BaseActivity() {
         toast.setOnClickListener { easyStartActivity(ToastActivity::class.java) }
         seekbar.setOnClickListener { easyStartActivity(SeekBarActivity::class.java) }
         spiderweb.setOnClickListener { easyStartActivity(SpiderWebActivity::class.java) }
-        qrcode.setOnClickListener { easyStartActivity(QRCodeActivity::class.java)  }
+        qrcode.setOnClickListener { easyStartActivity(QRCodeActivity::class.java) }
+        photo.setOnClickListener { easyStartActivity(PhotoActivity::class.java) }
     }
-
 }

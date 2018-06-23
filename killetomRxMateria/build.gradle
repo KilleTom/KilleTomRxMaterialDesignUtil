@@ -1,7 +1,6 @@
-
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.1986545332@qq.com'
+group = 'com.github.1986545332@qq.com'
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -26,6 +25,7 @@ dependencies {
     implementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -33,4 +33,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation files('libs/zxing-3.3.3.jar')
     implementation 'com.google.zxing:core:3.3.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
