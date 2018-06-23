@@ -23,7 +23,11 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".PermissionDIYActivity"
@@ -32,12 +36,8 @@
             android:name=".ToastActivity"
             android:launchMode="singleInstance" />
         <activity android:name=".SeekBarActivity" />
-        <activity android:name=".SpiderWebActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SpiderWebActivity"></activity>
+        <activity android:name=".QRCodeActivity"></activity>
     </application>
 
 </manifest>

@@ -94,8 +94,8 @@
     <attr name="isSpiderStroke" format="boolean" />
     <attr name="isScoreStroke" format="boolean" />
     <attr name="isComplexOffset" format="boolean" />
-    <attr name="isGradientSpider" format="boolean"/>
-    <attr name="spiderEndBg" format="color"/>
+    <attr name="isGradientSpider" format="boolean" />
+    <attr name="spiderEndBg" format="color" />
 
     <declare-styleable name="RxEthanSpiderWeb">
         <attr name="maxScore" />
@@ -115,7 +115,6 @@
         <attr name="isComplexOffset" />
         <attr name="isGradientSpider" />
     </declare-styleable>
-
 
     <declare-styleable name="RxSpiderWebLayout">
         <attr name="isBuildInSpider" format="boolean" />
@@ -138,5 +137,16 @@
         <attr name="isGradientSpider" />
     </declare-styleable>
 
+    <declare-styleable name="RxHerculesQRCodeImageView">
+        <attr name="qrMode" format="integer">
+            <enum name="qrNormoal" value="0" />
+            <enum name="qrLogoCenter" value="1" />
+            <enum name="qrLogoBg" value="2"/>
+            <enum name="qrLogoShape" value="3"/>
+        </attr>
+        <attr name="qrColor" format="color" />
+        <attr name="qrMessage" format="string" />
+        <attr name="qrLogo" format="reference" />
+    </declare-styleable>
 
 </resources>

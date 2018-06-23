@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QRCodeActivity">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+            android:id="@+id/qr1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
+            app:qrMessage="https://github.com/KilleTom/KilleTomRxMaterialDesignUtil"
+            app:qrMode="qrNormoal" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+            android:id="@+id/qr2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:qrColor="@color/darkturquoise"
+            app:qrLogo="@mipmap/qrlogo2"
+            app:qrMessage="https://github.com/KilleTom/KilleTomRxMaterialDesignUtil"
+            app:qrMode="qrNormoal" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l1">
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+            android:id="@+id/qr3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
+            app:qrMessage="https://github.com/KilleTom/KilleTomRxMaterialDesignUtil"
+            app:qrMode="qrLogoCenter" />
+
+        <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+            android:id="@+id/qr4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:qrColor="@color/darkturquoise"
+            app:qrLogo="@mipmap/qrlogo2"
+            app:qrMessage="https://github.com/KilleTom/KilleTomRxMaterialDesignUtil"
+            app:qrMode="qrLogoCenter" />
+    </LinearLayout>
+
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+        android:id="@+id/qr5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/l2"
+        app:qrLogo="@mipmap/qrlogo3"
+        app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
+        app:qrMode="qrLogoBg" />
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/l2"
+        app:qrLogo="@mipmap/qrlogo2"
+        app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
+        app:qrMode="qrLogoBg" />
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+        android:id="@+id/qr6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/qr5"
+        android:background="@drawable/qrlogoshape"
+        app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
+        app:qrMode="qrLogoShape" />
+
+</android.support.constraint.ConstraintLayout>

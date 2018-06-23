@@ -11,8 +11,10 @@ class MainActivity : BaseActivity() {
         permission1.setOnClickListener { easyStartActivity(PermissionDemoActivity::class.java) }
         permission2.setOnClickListener { easyStartActivity(PermissionDIYActivity::class.java) }
         raise.setOnClickListener { easyStartActivity(MasterActivity::class.java) }
-        toast.setOnClickListener{ easyStartActivity(ToastActivity::class.java)}
+        toast.setOnClickListener { easyStartActivity(ToastActivity::class.java) }
         seekbar.setOnClickListener { easyStartActivity(SeekBarActivity::class.java) }
+        spiderweb.setOnClickListener { easyStartActivity(SpiderWebActivity::class.java) }
+        qrcode.setOnClickListener { easyStartActivity(QRCodeActivity::class.java)  }
     }
 
 }
