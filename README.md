@@ -87,7 +87,7 @@
     public Config setUseAnim(boolean useAnim) 
 //不需要过多的设置的情况下可以直接调用如下这一个方法
     public Config show(RxToastType rxToastType, @NonNull Context context, @NonNull CharSequence message)
-//最后调用Apply方法提交请开发者放心最终提交完成后会重新初始化改Toast配置清单中的模式下的默认属性如果有特殊情况下可以直接调用reset()方法回退属性设置
+//最后调用Apply方法提交，apply后reset config默认属性，特殊情况下直接调用reset()方法回退属性设置
     public void apply() 
 ```
 ##### 调用示列如下：
@@ -102,8 +102,9 @@
                 .apply()
 ```          
 ## 权限模式简化申请：
-    分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限的弹窗的弹窗但是带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
-    使用该功能的时候可以选择继承RxPermissionBaseActivity()重写一些方法即可免去写权限回调结果的判断，如果不想继承RxPermissionBaseActivity()则需要重写回调结果，回调结果的requestCode值为1需要对它进行会调处理
+    分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限弹窗。
+    带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
+    可选择继承RxPermissionBaseActivity重写方法处理相应的状态，不继承需要重写回调方法，requestCode值为1需要对它进行会调处理。
 ### RxPermissionBaseActivity()重写方法如下
 ```kotlin
     override fun permissionAllow() {
