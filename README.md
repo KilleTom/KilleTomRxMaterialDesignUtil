@@ -36,9 +36,7 @@
 如果不需要Z轴动画变化可以将Z轴设置0dp
 调用方法如下：
 ```java
-    public void setHeightLightEvetion(int dimenId){
-        mDelegate.setViewHeightLightElevation(dimenId);
-    }
+    public void setHeightLightEvetion(int dimenId){ mDelegate.setViewHeightLightElevation(dimenId); }
 ```   
 ## 自定义Toast并支持链式调用
 ### 默认有5种模式如下
@@ -201,9 +199,9 @@
             RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "权限获取错误").apply()
     }
 ```
-#RxAnneSeekBar部分示例
+## RxAnneSeekBar部分示例
 更多示例请去查阅代码源码也有注释讲解
-
+```kotlin
         anner1.max = 100F
         anner1.progress = 11F
         //手动设置进度及指示器相关颜色
@@ -224,17 +222,16 @@
             }
             return@OnTouchListener false
         })
-    
+```
+```xml
     <--！"修改进度颜色及未完成进度颜色、指示器颜色" -->
-
         <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:anneProgress="10"
             app:anneProgressColor="@color/bisque"
             app:anneReadyProgressColor="@color/violet"
-            app:anneThumbIndicatorColor="@color/dimgray" />
-            
+            app:anneThumbIndicatorColor="@color/dimgray" />     
         <--！"设置平均点n例如二分之则设置为1平均分为多少份就总份数减去一" -->  
         <cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
             android:layout_width="wrap_content"
@@ -246,6 +243,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:anneThumbIndicator="RoundedRectangleIndicator"/>
-
+```
     
     
