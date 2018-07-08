@@ -195,7 +195,7 @@
             if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 RxToast.Config.getInstance().show(RxToastType.RxToastSuccessType, this, "获取到权限了").apply()
             else
-                RxToast.Config.getInstance().show(RxToastType.RxToastWarningType, this, "有些权限用户没有允许").apply()
+                RxToast.Config.getInstance().show(RxToastType.RxToastWarningType, this, "部分权限授权失败").apply()
         else
             RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "权限获取错误").apply()
     }
