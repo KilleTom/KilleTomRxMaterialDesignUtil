@@ -1,5 +1,18 @@
+
 # KilleTomRxMaterialDesignUtil
 依赖方式：https://jitpack.io/#KilleTom/KilleTomRxMaterialDesignUtil 这个网站会告诉你有多少个版本以及你选择哪个版本进行依赖，多种依赖方式供你选择
+
+## 运行效果图
+| Tables                                                                                                     | Are |
+| :--------------------------------------------------------:|:----------------------------------------------------:| 
+| RaiseButton                                                                                         |   RxToast  |
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/raise_btn.gif)     |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/toast.gif)              | 
+| RxPermissions                                              | RxAnneSeekBar                                       |
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/permission.gif)    | RxAnneSeekBa                                                                                                                            |
+| RxHerculesQRCodeImageView                                  | RxEthanSpiderWeb RxSpiderWebLayout                  |
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)        |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)             |
+| RxPhotoTools                                                                                                     |
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |     
 
 ## 自定义RaiseButton
 ### RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
@@ -35,8 +48,6 @@
 //如果不需要Z轴动画变化可以将Z轴设置0dp,调用方法如下：
     public void setHeightLightEvetion(int dimenId){ mDelegate.setViewHeightLightElevation(dimenId); }
 ```
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/raise_btn.gif)
 ## 自定义Toast并支持链式调用
 ### 默认有5种模式如下
 ```java
@@ -100,8 +111,7 @@
                 .setTextSize(15)
                 .apply()
 ```          
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/toast.gif)
+
 ## 权限模式简化申请：
     分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限弹窗。
     带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
@@ -200,8 +210,6 @@
             RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "权限获取错误").apply()
     }
 ```
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/permission.gif)
 ## RxAnneSeekBar部分示例
 更多示例请去查阅代码源码也有注释讲解
 ```kotlin
@@ -290,8 +298,6 @@
 <!--大部分属性支持代码动态修改-->
 <!--具体所有效果均在蛛网评分控件页面的代码上-->
 ```
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)
 ## RxHerculesQRCodeImageView 二维码部分示例
 ```xml
 <!--二维码自定义属性-->
@@ -318,8 +324,6 @@
         app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
         app:qrMode="qrLogoShape" />
 ```
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)
 ## RxPhotoTools图片选择示例
 使用它可以简化图片申请代码处理回调结果即可
 ```Kotlin
@@ -343,5 +347,3 @@ class PhotoActivity : RxPhotoActivity() {
 }
 //不想继承可以参考 RxPhotoActivity() 中的代码避免忘记权限申请导致出错
 ```
-#### 运行结果
-![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)
