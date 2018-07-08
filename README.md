@@ -3,8 +3,8 @@
 
 ## 自定义RaiseButton
 ### RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
-声明style：
 ```xml
+<!--声明style： -->
     <style name="RxRaisedDropButtonPrimaryStyle" parent="Base.Widget.AppCompat.Button.Colored">
         <!--设置点亮的动画颜色-->
         <item name="android:colorControlHighlight">#DA6954</item>
@@ -13,9 +13,7 @@
         <item name="android:colorControlActivated">#DA8736</item>
         <item name="android:colorButtonNormal">@color/colorAccent</item>
     </style>
-```
-引用Theme
-```xml
+<!--引用Theme: -->
     <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
         android:id="@+id/showtoast"
         android:layout_width="wrap_content"
@@ -33,11 +31,12 @@
         android:theme="@style/RxRaisedDropPrimaryStyle"
         android:layout_margin="10dp"/> 
 ```
-如果不需要Z轴动画变化可以将Z轴设置0dp
-调用方法如下：
 ```java
+//如果不需要Z轴动画变化可以将Z轴设置0dp,调用方法如下：
     public void setHeightLightEvetion(int dimenId){ mDelegate.setViewHeightLightElevation(dimenId); }
-```   
+```
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/raise_btn.gif)
 ## 自定义Toast并支持链式调用
 ### 默认有5种模式如下
 ```java
@@ -101,6 +100,8 @@
                 .setTextSize(15)
                 .apply()
 ```          
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/toast.gif)
 ## 权限模式简化申请：
     分为带弹窗提示用户申请或直接让系统弹窗申请权限该两种模式都是最终会弹出系统申请权限弹窗。
     带弹窗模式可以更直观的让用户知道该功能模块需要使用到什么权限，带权限弹窗支持自定义弹窗或者选择默认弹窗。
@@ -119,7 +120,6 @@
         RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "取消授权").apply()
     }
 //然后这样使用：
-
      private fun dialog() {
      //弹窗代码示例
         RxPermissions.with(this).initDialogPermission(
@@ -200,6 +200,8 @@
             RxToast.Config.getInstance().show(RxToastType.RxToastErrorType, this, "权限获取错误").apply()
     }
 ```
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/permission.gif)
 ## RxAnneSeekBar部分示例
 更多示例请去查阅代码源码也有注释讲解
 ```kotlin
@@ -245,5 +247,101 @@
             android:layout_height="wrap_content"
             app:anneThumbIndicator="RoundedRectangleIndicator"/>
 ```
-    
-    
+## RxEthanSpiderWeb RxSpiderWebLayout部分示例
+```xml
+ <declare-styleable name="RxEthanSpiderWeb">
+        <attr name="maxScore" />
+        <attr name="hierarchyCount" />
+        <attr name="angleCount" />
+        <attr name="spiderStrokeWidth" />
+        <attr name="scoreStrokeWidth" />
+        <attr name="spiderStokeBg" />
+        <attr name="spiderBg" />
+        <attr name="spiderEndBg" />
+        <attr name="scoreBg" />
+        <attr name="scoreStokeBg" />
+        <attr name="isSpiderBg" />
+        <attr name="isScoreBg" />
+        <attr name="isSpiderStroke" />
+        <attr name="isScoreStroke" />
+        <attr name="isComplexOffset" />
+        <attr name="isGradientSpider" />
+    </declare-styleable>
+<declare-styleable name="RxSpiderWebLayout">
+        <attr name="isBuildInSpider" format="boolean" />
+        <attr name="spiderMargin" format="dimension" />
+        <attr name="maxScore" />
+        <attr name="hierarchyCount" />
+        <attr name="angleCount" />
+        <attr name="spiderStrokeWidth" />
+        <attr name="scoreStrokeWidth" />
+        <attr name="spiderStokeBg" />
+        <attr name="spiderBg" />
+        <attr name="spiderEndBg" />
+        <attr name="scoreBg" />
+        <attr name="scoreStokeBg" />
+        <attr name="isSpiderBg" />
+        <attr name="isScoreBg" />
+        <attr name="isSpiderStroke" />
+        <attr name="isScoreStroke" />
+        <attr name="isComplexOffset" />
+        <attr name="isGradientSpider" />
+    </declare-styleable>
+<!--大部分属性支持代码动态修改-->
+<!--具体所有效果均在蛛网评分控件页面的代码上-->
+```
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)
+## RxHerculesQRCodeImageView 二维码部分示例
+```xml
+<!--二维码自定义属性-->
+   <declare-styleable name="RxHerculesQRCodeImageView">
+        <attr name="qrMode" format="integer">
+            <enum name="qrNormoal" value="0" />
+            <enum name="qrLogoCenter" value="1" />
+            <enum name="qrLogoBg" value="2"/>
+            <enum name="qrLogoShape" value="3"/>
+        </attr>
+        <attr name="qrColor" format="color" />
+        <attr name="qrMessage" format="string" />
+        <attr name="qrLogo" format="reference" />
+    </declare-styleable>
+<!--渐变模式下xml使用方式，其余方式参考示例页面xml文件即可-->
+  <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+        android:id="@+id/qr6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/qr5"
+        android:background="@drawable/qrlogoshape"
+        app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
+        app:qrMode="qrLogoShape" />
+```
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)
+## RxPhotoTools图片选择示例
+使用它可以简化图片申请代码处理回调结果即可
+```Kotlin
+class PhotoActivity : RxPhotoActivity() {
+    override fun photoUri(uri: Uri?) {
+        textView.text = "图片uri信息是："+uri.toString()
+        Log.i("ypz",uri.toString())
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_photo)
+        show.setOnClickListener {
+            if (chosePhotoDialog!=null) chosePhotoDialog.show()
+            else{
+                chosePhotoDialog = ChosePhotoDialog(this, cn.ypz.com.killetomrxmateria.R.style.ChosePhotoDialog,null)
+                chosePhotoDialog.show()
+            }
+        }
+    }
+}
+//不想继承可以参考 RxPhotoActivity() 中的代码避免忘记权限申请导致出错
+```
+#### 运行结果
+![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)
