@@ -7,6 +7,7 @@ import cn.ypz.com.killetomrxmateria.rxwidget.base.RxPhotoActivity
 import cn.ypz.com.killetomrxmateria.rxwidget.tools.toolsdialog.ChosePhotoDialog
 import kotlinx.android.synthetic.main.activity_photo.*
 
+
 class PhotoActivity : RxPhotoActivity() {
     override fun photoUri(uri: Uri?) {
         textView.text = "图片uri信息是："+uri.toString()
