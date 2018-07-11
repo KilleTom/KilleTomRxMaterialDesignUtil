@@ -3,14 +3,14 @@ package cn.ypz.com.killetomrxmaterialdesignutil
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity
 import cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog.RxPermissionEmpty
 import cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog.RxPermissions
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.RxToast
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.anim.RxToastType
 import kotlinx.android.synthetic.main.activity_permission_diy.*
 
-class PermissionDIYActivity : AppCompatActivity(), RxPermissions.Builder.PermissionDialogCancle, RxPermissions.Builder.RequestpermissionSelf {
+class PermissionDIYActivity : BaseActivity(), RxPermissions.Builder.PermissionDialogCancle, RxPermissions.Builder.RequestpermissionSelf {
 
     override fun self() = RxToast.Config.getInstance().show(RxToastType.RxToastInfoType, this, "已经存在权限").apply()
 
@@ -19,6 +19,8 @@ class PermissionDIYActivity : AppCompatActivity(), RxPermissions.Builder.Permiss
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permission_diy)
+        transgressionStatusBarWindow()
+        isBackPressedFinsh = true
         p_dialog.setOnClickListener {
             RxPermissions.with(this).initDialogPermission(
                     RxPermissions.Builder.RequestpermissionSelf { this.self() },

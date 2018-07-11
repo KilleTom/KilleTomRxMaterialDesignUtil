@@ -8,7 +8,15 @@
         <item name="android:colorControlNormal">@color/colorAccent</item>
         <item name="android:colorControlActivated">#DA8736</item>
         <item name="android:colorButtonNormal">@color/colorAccent</item>
+    </style>
 
+    <style name="RxRaisedDropPrimaryStyle2" parent="Theme.AppCompat.Light">
+        <!--设置点亮的动画颜色-->
+        <item name="android:colorControlHighlight">#DA6954</item>
+        <!--设置正常背景颜色颜色-->
+        <item name="android:colorControlNormal">@color/permissionBgColorGreenLight</item>
+        <item name="android:colorControlActivated">#DA8736</item>
+        <item name="android:colorButtonNormal">@color/permissionBgColorGreenLight</item>
     </style>
 
     <style name="RxRaisedDropNoRippleStyle" parent="Theme.AppCompat.Light">">

@@ -1,6 +1,7 @@
 package cn.ypz.com.killetomrxmaterialdesignutil
 
 import android.os.Bundle
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -8,6 +9,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        transgressionStatusBarWindow()
         permission1.setOnClickListener { easyStartActivity(PermissionDemoActivity::class.java) }
         permission2.setOnClickListener { easyStartActivity(PermissionDIYActivity::class.java) }
         raise.setOnClickListener { easyStartActivity(MasterActivity::class.java) }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlurActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/rs_bluer"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/f_bluer"
+        app:layout_constraintTop_toTopOf="parent" 
+        app:layout_constraintBottom_toTopOf="@id/rs"/>
+
+    <ImageView
+        android:id="@+id/f_bluer"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rs_bluer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/rs_bluer"
+        app:layout_constraintTop_toTopOf="@+id/rs_bluer"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/rs"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rs_bluer"
+        app:layout_constraintStart_toStartOf="@+id/rs_bluer"
+        app:layout_constraintTop_toBottomOf="@id/rs_bluer"
+        android:scaleType="fitXY"
+        android:src="@mipmap/qrlogo"/>
+
+    <ImageView
+        android:id="@+id/f"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rs"
+        app:layout_constraintEnd_toEndOf="@+id/f_bluer"
+        app:layout_constraintStart_toStartOf="@+id/f_bluer"
+        app:layout_constraintTop_toTopOf="@id/rs"
+        android:scaleType="fitXY"
+        android:src="@mipmap/qrlogo2"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -27,7 +27,9 @@ class PermissionDemoActivity : RxPermissionBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permission_demo)
-        p_dialog.setOnClickListener({ dialog() })
+        transgressionStatusBarWindow()
+        isBackPressedFinsh = true
+        p_dialog.setOnClickListener{ dialog() }
         p_1.setOnClickListener { noDialog1() }
         p_2.setOnClickListener { noDialog2() }
     }

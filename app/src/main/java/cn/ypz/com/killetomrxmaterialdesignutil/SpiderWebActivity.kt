@@ -1,17 +1,19 @@
 package cn.ypz.com.killetomrxmaterialdesignutil
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.TextView
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity
 import cn.ypz.com.killetomrxmateria.rxwidget.spiderweb.RxSpiderWebLayout
 import kotlinx.android.synthetic.main.activity_spider_web.*
 
-class SpiderWebActivity : AppCompatActivity() {
+class SpiderWebActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spider_web)
+        transgressionStatusBarWindow()
+        isBackPressedFinsh = true
         spier.setScores(floatArrayOf(8F, 6F, 7F, 3F, 2F))
         setupSpiderLayout(spider_layout,
                 floatArrayOf(
@@ -46,5 +48,11 @@ class SpiderWebActivity : AppCompatActivity() {
             Log.e("ypz", e.message)
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
 
 }

@@ -2,17 +2,19 @@ package cn.ypz.com.killetomrxmaterialdesignutil
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.RxToast
 import cn.ypz.com.killetomrxmateria.rxwidget.toast.anim.RxToastType
 import kotlinx.android.synthetic.main.activity_toast.*
 
-class ToastActivity : AppCompatActivity() {
+class ToastActivity : BaseActivity() {
 
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toast)
+        isBackPressedFinsh = true
+        transgressionAllWindow()
         s1.setOnClickListener {
             RxToast.choseType(RxToastType.RxToastSuccessType, this, "默认成功方法").show()
         }

@@ -1,14 +1,14 @@
 package cn.ypz.com.killetomrxmaterialdesignutil
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity
 import cn.ypz.com.killetomrxmateria.rxwidget.seekbar.RxAnneSeekBar
 import kotlinx.android.synthetic.main.activity_seek_bar.*
 
-class SeekBarActivity : AppCompatActivity() {
+class SeekBarActivity : BaseActivity() {
 
     private var X: Float = 0F
     private var Y: Float = 0F;
@@ -23,6 +23,8 @@ class SeekBarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seek_bar)
+        transgressionStatusBarWindow()
+        isBackPressedFinsh = true
         //手动设置最大值和进度值
         anner1.max = 100F
         anner1.progress = 11F

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/burlywood"
     tools:context=".MasterActivity">
 
 
@@ -12,9 +13,10 @@
         android:id="@+id/showtoast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/RxRaisedDropPrimaryStyle"
+        android:theme="@style/RxRaisedDropPrimaryStyle2"
         android:text="DIY has Ripper"
-        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_gravity="center_horizontal"
         />
 
@@ -32,7 +34,7 @@
         android:layout_gravity="center_horizontal"
         android:scaleType="centerInside"
         android:src="@drawable/ic_black_24dp"
-        android:theme="@style/RxRaisedDropPrimaryStyle"
+        android:theme="@style/RxRaisedDropPrimaryStyle2"
         android:layout_margin="10dp"/>
 
     <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropImageButton

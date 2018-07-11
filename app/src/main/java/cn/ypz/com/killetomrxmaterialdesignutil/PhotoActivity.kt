@@ -17,6 +17,8 @@ class PhotoActivity : RxPhotoActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo)
+        transgressionStatusBarWindow()
+        isBackPressedFinsh = true
         show.setOnClickListener {
             if (chosePhotoDialog!=null) chosePhotoDialog.show()
             else{

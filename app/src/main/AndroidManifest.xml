@@ -23,10 +23,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".PermissionDIYActivity"
@@ -37,7 +34,14 @@
         <activity android:name=".SeekBarActivity" />
         <activity android:name=".SpiderWebActivity" />
         <activity android:name=".QRCodeActivity" />
-        <activity android:name=".PhotoActivity"></activity>
+        <activity android:name=".PhotoActivity" />
+        <activity android:name=".BlurActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

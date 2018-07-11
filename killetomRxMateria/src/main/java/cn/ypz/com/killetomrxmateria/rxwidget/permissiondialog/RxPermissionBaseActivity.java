@@ -2,15 +2,17 @@ package cn.ypz.com.killetomrxmateria.rxwidget.permissiondialog;
 
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 
-public abstract class RxPermissionBaseActivity extends AppCompatActivity {
+import cn.ypz.com.killetomrxmateria.rxwidget.base.BaseActivity;
+
+public abstract class RxPermissionBaseActivity extends BaseActivity {
 
     protected abstract void permissionAllow();
 
     protected abstract void permissionRefuse();
 
     protected abstract void requestCodeError(int requestCode);
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

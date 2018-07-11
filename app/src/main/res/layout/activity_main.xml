@@ -4,69 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/burlywood"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="30dp"
         android:paddingTop="10dp">
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/raise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RaiseButton"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/flatb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FlatbButton"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/permission1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="easyPermission"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/permission2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DIYPermission"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="toast"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/seekbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="seekbar"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
 
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/spiderweb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="spiderweb"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
 
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/qrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="qrcode"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
 
-        <Button
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
             android:id="@+id/photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="photo"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
 
 
