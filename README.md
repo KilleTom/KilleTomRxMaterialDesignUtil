@@ -11,8 +11,8 @@
 | ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/permission.gif)    | RxAnneSeekBa                                                                                                                            |
 | RxHerculesQRCodeImageView                                  | RxEthanSpiderWeb RxSpiderWebLayout                  |
 | ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)        |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)             |
-| RxPhotoTools                                                                                                     |
-| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |     
+| RxPhotoTools                                               | RxCatherineBlur                                     |
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/blur.png)               
 
 ## 自定义RaiseButton
 ### RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
@@ -346,4 +346,65 @@ class PhotoActivity : RxPhotoActivity() {
     }
 }
 //不想继承可以参考 RxPhotoActivity() 中的代码避免忘记权限申请导致出错
+```
+## BaseActivity
+支持两种沉侵式设置
+使用方法继承它然后调用transgressionStatusBarWindow()或者transgressionAllWindow()即可
+## RxCatherineBlur
+高斯模糊使用了缩放预处理加快高斯模糊的生成
+支持链式调用如下：
+```Kotlin
+//radius 模糊值
+//scale 图片预处理宽高缩放多少
+//OriginalBtimap 原图Bitmap
+//blueWay 支持常用两种模糊方式默认为RenderScript如果使用默认方式则不用链式调用blueWay()
+ f_bluer.setImageBitmap(RxCatherineBlur.Config.getInstance(this).
+                OriginalBtimap(BitmapFactory.decodeResource(resources, R.mipmap.qrlogo2)).
+                scale(0.75f).blueWay(RxCatherineBlur.BlueWay.FastBlur).radius(25).apply())
+```
+亦可支持新建对象设置属性调用
+```Java
+public void setOriginalBtimap(Bitmap originalBtimap) {
+        this.originalBtimap = originalBtimap;
+        if (scale > 0 && scale < 1) scale();
+    }
+
+    public RxCatherineBlur(Context context) {
+        this.context = context;
+    }
+
+    public Context getContext() {
+        return context;
+    }
+
+    public void setScale(float scale) {
+        if (scale <= 0 || scale > 1) scale = 0.75f;
+        this.scale = scale;
+        if (originalBtimap != null) scale();
+    }
+
+    private void scale() {
+        scaleBtimap = Bitmap.createScaledBitmap(
+                originalBtimap,
+                (int) (originalBtimap.getWidth() * scale),
+                (int) (originalBtimap.getHeight() * scale),
+                false);
+    }
+
+    public void setRadius(int radius) {
+        if (radius > 25 || radius < 0) radius = 10;
+        this.radius = radius;
+    }
+     public Bitmap blur(BlueWay blueWay,Bitmap originalBtimap,int radius,float scale) {
+        setOriginalBtimap(originalBtimap);
+        setRadius(radius);
+        setScale(scale);
+        return blur(blueWay);
+    }
+
+    public Bitmap blur(BlueWay blueWay){
+        if (blueWay == BlueWay.RenderScript)
+            return rsBlur();
+        else return fBlur();
+    }
 ```
