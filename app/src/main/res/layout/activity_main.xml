@@ -80,6 +80,13 @@
             android:theme="@style/RxRaisedDropPrimaryStyle2"
             android:layout_gravity="center_horizontal"/>
 
+        <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+            android:id="@+id/blur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blur"
+            android:theme="@style/RxRaisedDropPrimaryStyle2"
+            android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
 
