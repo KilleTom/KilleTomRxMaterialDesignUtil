@@ -13,7 +13,8 @@
 | ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)        |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)             |
 | RxPhotoTools                                               | RxCatherineBlur                                     |
 | ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/blur.png)               |
-| RxEasyArcLoading                                           |                                                     |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/easyarcloading.gif)     |
+| RxEasyArcLoading                                               |                                                 |
+|![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/easyarcloading.gif) |
 
 ## 自定义RaiseButton
 ### RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
