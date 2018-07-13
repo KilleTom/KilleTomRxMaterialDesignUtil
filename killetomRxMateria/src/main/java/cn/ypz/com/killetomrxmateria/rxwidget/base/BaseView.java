@@ -1,6 +1,7 @@
 package cn.ypz.com.killetomrxmateria.rxwidget.base;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -28,5 +29,9 @@ public abstract class BaseView extends View{
 
     protected boolean isSetDimen(int measureSpecSize) {
         return (MeasureSpec.getMode(measureSpecSize) == MeasureSpec.EXACTLY);
+    }
+
+    protected void paintSetColorId(Paint paint,int colorId){
+        paint.setColor(getResources().getColor(colorId));
     }
 }

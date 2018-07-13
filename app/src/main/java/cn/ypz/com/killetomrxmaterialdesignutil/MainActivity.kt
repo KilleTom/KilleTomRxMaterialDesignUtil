@@ -19,5 +19,6 @@ class MainActivity : BaseActivity() {
         qrcode.setOnClickListener { easyStartActivity(QRCodeActivity::class.java) }
         photo.setOnClickListener { easyStartActivity(PhotoActivity::class.java) }
         blur.setOnClickListener { easyStartActivity(BlurActivity::class.java) }
+        load.setOnClickListener { easyStartActivity(LoadingActivity::class.java) }
     }
 }

@@ -991,10 +991,10 @@ public class RxDataTool {
             -10307, -10296, -10281, -10274, -10270, -10262, -10260, -10256, -10254};
     private static String[] pyStr = new String[]{
             /*A*/
-            "a", "ai", "an", "ang", "ao", "ba", "bai", "ban", "bang", "bao",
+            "a", "ai", "an", "ang", "ao",
 
             /*B*/
-            "bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu",
+            "ba", "bai", "ban", "bang", "bao","bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu",
 
             /*C*/
             "ca", "cai", "can", "cang", "cao", "ce", "ceng", "cha", "chai", "chan", "chang", "chao", "che", "chen", "cheng", "chi", "chong", "chou", "chu", "chuai", "chuan", "chuang", "chui", "chun", "chuo", "ci", "cong", "cou", "cu", "cuan", "cui", "cun", "cuo",

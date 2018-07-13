@@ -38,7 +38,8 @@
         <activity android:name=".SpiderWebActivity" />
         <activity android:name=".QRCodeActivity" />
         <activity android:name=".PhotoActivity" />
-        <activity android:name=".BlurActivity">
+        <activity android:name=".BlurActivity"/>
+        <activity android:name=".LoadingActivity">
 
         </activity>
     </application>
