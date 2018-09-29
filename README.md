@@ -1,4 +1,4 @@
-
+ 
 # KilleTomRxMaterialDesignUtil
 依赖方式：https://jitpack.io/#KilleTom/KilleTomRxMaterialDesignUtil 这个网站会告诉你有多少个版本以及你选择哪个版本进行依赖，多种依赖方式供你选择
 
@@ -12,7 +12,9 @@
 | RxHerculesQRCodeImageView                                  | RxEthanSpiderWeb RxSpiderWebLayout                  |
 | ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/qrcode.gif)        |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/spider.gif)             |
 | RxPhotoTools                                               | RxCatherineBlur                                     |
-| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/blur.png)               
+| ![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/chose_photo.gif)   |![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/blur.png)               |
+| RxEasyArcLoading                                               |                                                 |
+|![](https://github.com/KilleTom/KilleTomRxMaterialDesignUtil/blob/master/app/src/main/res/raw/easyarcloading.gif) |
 
 ## 自定义RaiseButton
 ### RxRaisedDropButton 、RxRaisedDropImageButton使用方式如下：
