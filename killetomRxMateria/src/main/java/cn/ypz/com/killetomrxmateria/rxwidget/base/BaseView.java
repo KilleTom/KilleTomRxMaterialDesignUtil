@@ -28,7 +28,7 @@ public abstract class BaseView extends View{
     protected  abstract void initAttr(Context context,@Nullable AttributeSet attrs);
 
     protected boolean isSetDimen(int measureSpecSize) {
-        return (MeasureSpec.getMode(measureSpecSize) == MeasureSpec.EXACTLY);
+        return (MeasureSpec.getMode(measureSpecSize) != MeasureSpec.EXACTLY);
     }
 
     protected void paintSetColorId(Paint paint,int colorId){

@@ -88,6 +88,7 @@ public class RxEasyArcLoading extends BaseView {
         paint.setStyle(Paint.Style.STROKE);//
         if (multiple > 1) paint.setStrokeWidth(dp10 * multiple / 5);
         else paint.setStrokeWidth(dp10 / 4);
+        r = paint.getStrokeWidth();
     }
 
     protected void reset() {
@@ -129,10 +130,10 @@ public class RxEasyArcLoading extends BaseView {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.i("ypzLoading", widthMeasureSpec + "\n" + dp50);
-        if (!isSetDimen(widthMeasureSpec) || widthMeasureSpec < dp50) {
+        if (isSetDimen(widthMeasureSpec) || widthMeasureSpec < dp50) {
             widthMeasureSpec = dp50;
         }
-        if (!isSetDimen(heightMeasureSpec) || heightMeasureSpec < dp50) {
+        if (isSetDimen(heightMeasureSpec) || heightMeasureSpec < dp50) {
             heightMeasureSpec = dp50;
         }
         setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
@@ -145,6 +146,10 @@ public class RxEasyArcLoading extends BaseView {
         this.h = h;
         mini = Math.min(w,h);
         multiple = Math.min(w, h) / dp50;
+        setPaint(arc0FP);
+        setPaint(arc1FP);
+        setPaint(arc2FP);
+        setPaint(arc3FP);
 
     }
 
@@ -158,7 +163,7 @@ public class RxEasyArcLoading extends BaseView {
         super.onDraw(canvas);
         canvas.translate(w / 2, h / 2);//绘画点移动至中心点
         int i = 1;
-        for (int nextR=mini/2-dp10;nextR>0; nextR-=dp10){
+        for (int nextR=mini/2-dp10;nextR>0; nextR-=r){
             oval.set(-nextR, -nextR, nextR, nextR);
             if (i%2==0){
                 canvas.drawArc(oval, arc0_s, 52, false, arc0FP);

@@ -145,8 +145,10 @@
             <enum name="qrLogoShape" value="3"/>
         </attr>
         <attr name="qrColor" format="color" />
+        <attr name="bgColor" format="color" />
         <attr name="qrMessage" format="string" />
         <attr name="qrLogo" format="reference" />
+        <attr name="isUsedTripartiteComposition" format="boolean"/>
     </declare-styleable>
 
 </resources>

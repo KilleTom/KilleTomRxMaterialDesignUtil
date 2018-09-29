@@ -19,6 +19,7 @@ import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.Locale;
 import java.util.Map;
+
 import static cn.ypz.com.killetomrxmateria.rxwidget.tools.RxConstTool.*;
 
 
@@ -41,7 +42,7 @@ public class RxDataTool {
      * 判断字符串是否为空 为空即true
      *
      * @param str 字符串
-     * @return
+     * @return {@code true}: 为空<br>{@code false}: 不为空
      */
     public static boolean isNullString(@Nullable String str) {
         return str == null || str.length() == 0 || "null".equals(str);
@@ -120,7 +121,7 @@ public class RxDataTool {
      *
      * @param month
      * @param day
-     * @return
+     * @return 星座
      */
     public static String getAstro(int month, int day) {
         String[] starArr = {"魔羯座", "水瓶座", "双鱼座", "牡羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座", "天秤座", "天蝎座", "射手座"};
@@ -146,7 +147,7 @@ public class RxDataTool {
      * 130****0000
      *
      * @param mobile_phone 手机号码
-     * @return 130****0000
+     * @return 133****4030
      */
     public static String hideMobilePhone4(String mobile_phone) {
         if (mobile_phone.length() != 11) {
@@ -176,7 +177,7 @@ public class RxDataTool {
      * 银行卡后四位
      *
      * @param cardNo
-     * @return
+     * @return 银行卡后四位
      */
     public static String formatCardEnd4(String cardNo) {
         if (cardNo.length() < 8) {
@@ -225,17 +226,15 @@ public class RxDataTool {
 
     /**
      * 整型数组求和
-     *
-     * @param ints
-     * @return
+     * @param ints 整型数组
+     * @return sum
      */
     public static int intsGetSum(int[] ints) {
         int sum = 0;
-
-        for (int i = 0, len = ints.length; i < len; i++) {
-            sum += ints[i];
+        if (ints != null || ints.length == 0) return sum;
+        for (int index : ints) {
+            sum += index;
         }
-
         return sum;
     }
 
@@ -243,7 +242,7 @@ public class RxDataTool {
      * 字符串转换成long ,转换失败将会 return 0;
      *
      * @param str 字符串
-     * @return
+     * @return longValue
      */
     public static long stringToLong(String str) {
         if (isNullString(str)) {
@@ -259,9 +258,8 @@ public class RxDataTool {
 
     /**
      * 字符串转换成double ,转换失败将会 return 0;
-     *
      * @param str 字符串
-     * @return
+     * @return doubleValue
      */
     public static double stringToDouble(String str) {
         if (isNullString(str)) {
@@ -277,7 +275,6 @@ public class RxDataTool {
 
     /**
      * 字符串转换成浮点型 Float
-     *
      * @param str 待转换的字符串
      * @return 转换后的 float
      */
@@ -295,7 +292,6 @@ public class RxDataTool {
 
     /**
      * 将字符串格式化为带两位小数的字符串
-     *
      * @param str 字符串
      * @return
      */
@@ -592,7 +588,6 @@ public class RxDataTool {
 
     /**
      * 字节数转以unit为单位的size
-     *
      * @param byteNum 字节数
      * @param unit    <ul>
      *                <li>{@link MemoryUnit#BYTE}: 字节</li>
@@ -826,7 +821,6 @@ public class RxDataTool {
 
     /**
      * 金额格式化
-     *
      * @param value 数值
      * @return
      */
@@ -836,9 +830,8 @@ public class RxDataTool {
 
     /**
      * 金额格式化
-     *
      * @param value 数值
-     * @return
+     * @return 金额格式化
      */
     public static String getAmountValue(String value) {
         if (isNullString(value)) {
@@ -849,10 +842,9 @@ public class RxDataTool {
 
     /**
      * 四舍五入
-     *
      * @param value 数值
      * @param digit 保留小数位
-     * @return
+     * @return 四舍五入字符串
      */
     public static String getRoundUp(BigDecimal value, int digit) {
         return value.setScale(digit, BigDecimal.ROUND_HALF_UP).toString();
@@ -860,7 +852,6 @@ public class RxDataTool {
 
     /**
      * 四舍五入
-     *
      * @param value 数值
      * @param digit 保留小数位
      * @return
@@ -994,7 +985,7 @@ public class RxDataTool {
             "a", "ai", "an", "ang", "ao",
 
             /*B*/
-            "ba", "bai", "ban", "bang", "bao","bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu",
+            "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu",
 
             /*C*/
             "ca", "cai", "can", "cang", "cao", "ce", "ceng", "cha", "chai", "chan", "chang", "chao", "che", "chen", "cheng", "chi", "chong", "chou", "chu", "chuai", "chuan", "chuang", "chui", "chun", "chuo", "ci", "cong", "cou", "cu", "cuan", "cui", "cun", "cuo",

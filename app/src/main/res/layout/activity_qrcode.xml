@@ -72,6 +72,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/l1"
         app:layout_constraintTop_toBottomOf="@+id/l2"
+        android:background="@android:color/white"
         app:qrLogo="@mipmap/qrlogo3"
         app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
         app:qrMode="qrLogoBg" />
@@ -83,6 +84,7 @@
         app:layout_constraintEnd_toEndOf="@id/l1"
         app:layout_constraintTop_toBottomOf="@+id/l2"
         app:qrLogo="@mipmap/qrlogo2"
+        android:background="@android:color/white"
         app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
         app:qrMode="qrLogoBg" />
 
@@ -96,5 +98,18 @@
         android:background="@drawable/qrlogoshape"
         app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
         app:qrMode="qrLogoShape" />
+
+    <cn.ypz.com.killetomrxmateria.rxwidget.qrcode.RxHerculesQRCodeImageView
+        android:id="@+id/qr7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/l2"
+        app:layout_constraintTop_toBottomOf="@+id/qr5"
+        android:background="@drawable/qrlogoshape"
+        app:qrMessage="https://blog.csdn.net/qq_29856589/article/details/80311907"
+        app:qrMode="qrLogoShape"
+        isUsedTripartiteComposition="true"
+       />
 
 </android.support.constraint.ConstraintLayout>

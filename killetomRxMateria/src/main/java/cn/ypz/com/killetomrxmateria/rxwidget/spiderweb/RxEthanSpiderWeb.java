@@ -348,10 +348,10 @@ public class RxEthanSpiderWeb extends BaseView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        if (!isSetDimen(widthMeasureSpec)) {
+        if (isSetDimen(widthMeasureSpec)) {
             widthMeasureSpec = RxDimenUtils.dpToPx(100, getResources());
         }
-        if (!isSetDimen(heightMeasureSpec)) {
+        if (isSetDimen(heightMeasureSpec)) {
             widthMeasureSpec = RxDimenUtils.dpToPx(100, getResources());
         }
         setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
