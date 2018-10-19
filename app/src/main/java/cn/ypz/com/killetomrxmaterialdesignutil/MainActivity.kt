@@ -9,7 +9,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        transgressionStatusBarWindow()
+        transgressionAllWindow()
         permission1.setOnClickListener { easyStartActivity(PermissionDemoActivity::class.java) }
         permission2.setOnClickListener { easyStartActivity(PermissionDIYActivity::class.java) }
         raise.setOnClickListener { easyStartActivity(MasterActivity::class.java) }
