@@ -19,6 +19,16 @@
         <item name="android:colorButtonNormal">@color/permissionBgColorGreenLight</item>
     </style>
 
+    <style name="RxPhotoDialogCancleStyle" parent="Theme.AppCompat.Light">
+        <!--设置点亮的动画颜色-->
+        <item name="android:colorControlHighlight">@color/permissionBgColorGreenLight</item>
+        <!--设置正常背景颜色颜色-->
+        <item name="android:colorControlNormal">@color/lemonchiffon</item>
+        <item name="android:colorControlActivated">@color/lemonchiffon</item>
+        <item name="android:colorButtonNormal">@color/lemonchiffon</item>
+        <item name="android:text">20dp</item>
+    </style>
+
     <style name="RxRaisedDropNoRippleStyle" parent="Theme.AppCompat.Light">">
         <!--设置点亮的动画颜色为透明隐藏掉波纹动画-->
         <item name="android:colorControlHighlight">@android:color/transparent</item>
@@ -32,11 +42,4 @@
 
     </style>
 
-    <style name="RxRaisedDropButtonPermissionSureStyle" parent="Theme.AppCompat.Light">
-        <!--设置点亮的动画颜色-->
-        <item name="android:colorControlHighlight">#66CC99</item>
-        <!--设置正常背景颜色颜色-->
-        <item name="android:colorControlNormal">#CCFF99</item>
-        <item name="android:colorButtonNormal">#CCFF99</item>
-    </style>
 </resources>

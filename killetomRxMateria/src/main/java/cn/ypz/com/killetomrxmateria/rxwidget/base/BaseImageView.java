@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 public abstract class BaseImageView extends ImageView {
 
-    protected boolean isSquera;
+    protected boolean isSquare;
 
     public BaseImageView(Context context) {
         this(context,null);
@@ -44,7 +44,7 @@ public abstract class BaseImageView extends ImageView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         if (!isSetDimen(widthMeasureSpec)) widthMeasureSpec = resetWSize(widthMeasureSpec);
         if (!isSetDimen(heightMeasureSpec)) heightMeasureSpec = resetHSize(heightMeasureSpec);
-        if (isSquera){
+        if (isSquare){
             int size = Math.min(widthMeasureSpec,heightMeasureSpec);
             setMeasuredDimension(size,size);
         }else

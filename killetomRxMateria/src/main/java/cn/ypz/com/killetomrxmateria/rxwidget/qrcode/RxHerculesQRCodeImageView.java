@@ -369,7 +369,7 @@ public class RxHerculesQRCodeImageView extends BaseImageView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        isSquera = true;
+        isSquare = true;
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         if (getMeasuredHeight() >= 1200) size = 1200;
         else size = (1200 - getMeasuredHeight()) / 2 + getMeasuredHeight();
